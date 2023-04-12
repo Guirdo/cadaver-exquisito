@@ -1,0 +1,11 @@
+:root {
+  --f-scale:1.2;
+
+  --fs-md: clamp(1rem,1rem + 0.5vi, 1.4rem);
+  --fs-sm: calc(var(--fs-md) / var(--f-scale));
+  --fs-xs: calc(var(--fs-sm) / var(--f-scale));
+
+  --fs-lg: calc(var(--fs-md) * var(--f-scale));
+  --fs-xlg: calc(var(--fs-lg) * var(--f-scale));
+  --fs-xxlg: calc(var(--fs-xlg) * var(--f-scale));
+}
