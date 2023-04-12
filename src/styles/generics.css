@@ -53,6 +53,17 @@ select {
 }
 
 h1 {
+  font-size: var(--fs-xxlg);
+}
+
+h2 {
   font-size: var(--fs-xlg);
-  text-align: center;
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+ol,ul {
+  margin-inline-start: var(--s-xlg);
 }
