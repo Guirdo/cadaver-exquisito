@@ -1,9 +1,18 @@
-export default function App() {
-  return(
-    <div>
-      <h1>💀Cadaver exquisito🍷</h1>
+import { Route, Routes } from "@solidjs/router";
+import HomePage from "./components/HomePage/HomePage";
+import Navbar from "./components/Navbar";
 
-      <p>Hello world!</p>
+export default function App() {
+  return (
+    <div>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={HomePage} />
+        </Routes>
+      </main>
     </div>
   )
 }
