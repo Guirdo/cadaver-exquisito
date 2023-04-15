@@ -2,8 +2,12 @@
 .text-align-center { text-align: center }
 .fw-bold { font-weight: bold }
 
+.fs-sm {font-size: var(--s-sm)}
+
 .color-inherit { color: inherit }
 
+.p-xs { padding: var(--s-xs) }
+.p-sm { padding: var(--s-sm) }
 .p-md { padding: var(--s-md) }
 .p-block-md { padding-block: var(--s-md) }
 .p-inline-md { padding-inline: var(--s-md) }
@@ -11,6 +15,7 @@
 .w-6rem { width: 6rem }
 
 .align-items-center { align-items: center }
+.gap-xs { gap: var(--s-xs) }
 .gap-sm { gap: var(--s-sm) }
 .gap-md { gap: var(--s-md) }
 .gap-lg { gap: var(--s-lg) }
