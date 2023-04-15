@@ -1,7 +1,25 @@
-import { createSignal } from "solid-js"
+import { useNavigate } from "@solidjs/router"
+import { user } from "../../stores/user"
+import { supabase } from "../../supabase"
 
 export default function HomePage() {
-  const [nickname, setNickname] = createSignal('')
+  const navigate = useNavigate()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try{
+      const { data } = await supabase
+          .from('rooms')
+          .insert({players: [user.nickname]})
+          .select()
+          
+      navigate(`/${data[0].id}`)
+    }catch(error){
+      console.error(error)
+    }
+
+  }
 
   return (
     <div class="[ flex-column ] [ gap-lg p-md align-items-center ]">
@@ -9,7 +27,10 @@ export default function HomePage() {
         <img src="/skull.webp" />
       </figure>
 
-      <form class="[ flex-column ] [ gap-sm ]">
+      <form
+        class="[ flex-column ] [ gap-sm ]"
+        onSubmit={handleSubmit}
+      >
         <label
           class="fw-bold "
           for="nickname"
@@ -18,8 +39,9 @@ export default function HomePage() {
         </label>
         <input
           id="nickname"
-          value={nickname()}
-          onInput={(e) => setNickname(e.target.value)}
+          name="nickname"
+          value={user.nickname}
+          onInput={(e) => setUser('nickname',e.target.value)}
         />
 
         <button
