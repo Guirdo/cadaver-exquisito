@@ -1,5 +1,5 @@
 import { useNavigate } from "@solidjs/router"
-import { user } from "../../stores/user"
+import { user, setUser } from "../../stores/user"
 import { supabase } from "../../supabase"
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
     try{
       const { data } = await supabase
           .from('rooms')
-          .insert({players: [user.nickname]})
+          .insert({players: [{id: user.id, nickname: user.nickname}]})
           .select()
           
       navigate(`/${data[0].id}`)
