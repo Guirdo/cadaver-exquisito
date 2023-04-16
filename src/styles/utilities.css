@@ -13,9 +13,15 @@
 .p-inline-md { padding-inline: var(--s-md) }
 
 .w-6rem { width: 6rem }
+.w-100 { width: 100% }
 
 .align-items-center { align-items: center }
 .gap-xs { gap: var(--s-xs) }
 .gap-sm { gap: var(--s-sm) }
 .gap-md { gap: var(--s-md) }
 .gap-lg { gap: var(--s-lg) }
+
+.flex-grow { flex-grow: 1}
+
+.bg-gray { background-color: lightgray }
+.bg-blue { background-color: lightblue }
