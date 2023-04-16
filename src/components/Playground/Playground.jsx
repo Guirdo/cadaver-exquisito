@@ -3,6 +3,7 @@ import { useParams } from "@solidjs/router";
 import WaitingRoom from "./WaitingRoom/WaitingRoom";
 import { room, fetchRoom, subscribeToRoomChanges } from "../../stores/room";
 import ChatRoom from "./ChatRoom/ChatRoom";
+import Result from "./Result/Result";
 
 function StatusSwitcher() {
   return (
@@ -19,7 +20,7 @@ function StatusSwitcher() {
         </Match>
 
         <Match when={room.status === 2}>
-          <p>Se ha acabado el juego</p>
+          <Result />
         </Match>
       </Switch>
     </>
