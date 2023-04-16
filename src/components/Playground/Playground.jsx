@@ -2,6 +2,7 @@ import { Match, Switch } from "solid-js";
 import { useParams } from "@solidjs/router";
 import WaitingRoom from "./WaitingRoom/WaitingRoom";
 import { room, fetchRoom, subscribeToRoomChanges } from "../../stores/room";
+import ChatRoom from "./ChatRoom/ChatRoom";
 
 function StatusSwitcher() {
   return (
@@ -14,7 +15,11 @@ function StatusSwitcher() {
         </Match>
 
         <Match when={room.status === 1}>
-          <p>El juego a comenzado</p>
+          <ChatRoom />
+        </Match>
+
+        <Match when={room.status === 2}>
+          <p>Se ha acabado el juego</p>
         </Match>
       </Switch>
     </>
