@@ -21,7 +21,10 @@ export async function fetchRoom(id) {
 
     if (error) throw new Error(error.message)
 
-    setRoom({ ...data[0] })
+    let { messages } = data[0]
+    messages = messages ?? []
+
+    setRoom({ ...data[0], messages })
   } catch (error) {
     console.log(error)
   }
@@ -39,7 +42,10 @@ export async function subscribeToRoomChanges() {
         filter: `id=eq.${room.id}`
       },
       (payload) => {
-        const { status, rounds, playersLimit, players, messages } = payload.new
+        const { status, rounds, playersLimit, players } = payload.new
+        let { messages } = payload.new
+        messages = messages ?? []
+        
         setRoom({ status, rounds, playersLimit, players, messages })
       })
     .subscribe()
@@ -54,7 +60,7 @@ export async function joinGuest(id, nickname) {
         .from('rooms')
         .update({ players: [...players, { id, nickname }] })
         .eq('id', room.id)
-    }else {
+    } else {
       throw new Error('Casa llena! No puedes unirte')
     }
   } catch (error) {
@@ -68,6 +74,20 @@ export async function updateRoom(column, value) {
       .from('rooms')
       .update({ [column]: value })
       .eq('id', room.id)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export async function sendMessage(message) {
+  try {
+    const messages = unwrap(room.messages).map(e => e)
+
+    await supabase
+      .from('rooms')
+      .update({ messages: [...messages, message] })
+      .eq('id', room.id)
+
   } catch (error) {
     console.log(error)
   }
