@@ -32,7 +32,7 @@ export async function fetchRoom(id) {
 
 export async function subscribeToRoomChanges() {
   await supabase
-    .channel('any')
+    .channel('roomChanges')
     .on(
       'postgres_changes',
       {
@@ -54,11 +54,11 @@ export async function subscribeToRoomChanges() {
 export async function joinGuest(id, nickname) {
   try {
     if (room.playersLimit !== room.players.length) {
-      const players = unwrap(room.players).map(e => ({ id: e.id, nickname: e.nickname }))
+      const players = unwrap(room.players).map(e => ({ id: e.id, nickname: e.nickname, isOwner: e.isOwner }))
 
       await supabase
         .from('rooms')
-        .update({ players: [...players, { id, nickname }] })
+        .update({ players: [...players, { id, nickname, isOwner: false }] })
         .eq('id', room.id)
     } else {
       throw new Error('Casa llena! No puedes unirte')
@@ -91,4 +91,8 @@ export async function sendMessage(message) {
   } catch (error) {
     console.log(error)
   }
+}
+
+export async function finishGame() {
+  updateRoom('status', 2)
 }

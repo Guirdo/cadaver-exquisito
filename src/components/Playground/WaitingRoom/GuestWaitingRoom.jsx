@@ -13,6 +13,7 @@ export default function GuestWaitingRoom() {
     e.preventDefault()
 
     joinGuest(user.id, user.nickname)
+    setUser('isOwner', false)
 
     setReady(true)
   }

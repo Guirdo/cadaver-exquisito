@@ -11,8 +11,10 @@ export default function HomePage() {
     try{
       const { data } = await supabase
           .from('rooms')
-          .insert({players: [{id: user.id, nickname: user.nickname}]})
+          .insert({players: [{id: user.id, nickname: user.nickname, isOwner:true}]})
           .select()
+
+      setUser('isOwner',true)    
           
       navigate(`/${data[0].id}`)
     }catch(error){

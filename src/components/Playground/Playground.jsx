@@ -30,7 +30,10 @@ function StatusSwitcher() {
 export default function Playground() {
   const params = useParams();
   fetchRoom(params.id)
-  subscribeToRoomChanges()
+
+  if (room.status < 2) {
+    subscribeToRoomChanges()
+  }
 
   return (
     <div class="[ flex-column ] [ gap-lg p-md align-items-center ]">
