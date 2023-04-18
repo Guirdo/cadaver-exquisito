@@ -2,7 +2,8 @@
 .text-align-center { text-align: center }
 .fw-bold { font-weight: bold }
 
-.fs-sm {font-size: var(--s-sm)}
+.fs-xs {font-size: var(--fs-xs)}
+.fs-sm {font-size: var(--fs-sm)}
 
 .color-inherit { color: inherit }
 
@@ -15,13 +16,18 @@
 .w-6rem { width: 6rem }
 .w-100 { width: 100% }
 
+.h-100 { height: 100% }
+.min-hv-100 { min-height: 100vh }
+
 .align-items-center { align-items: center }
+
 .gap-xs { gap: var(--s-xs) }
 .gap-sm { gap: var(--s-sm) }
 .gap-md { gap: var(--s-md) }
 .gap-lg { gap: var(--s-lg) }
 
 .flex-grow { flex-grow: 1}
+.flex-grow-2 { flex-grow: 2}
 
 .bg-gray { background-color: lightgray }
 .bg-blue { background-color: lightblue }
