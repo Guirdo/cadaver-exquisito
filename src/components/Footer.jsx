@@ -1,21 +1,29 @@
 import { useI18n } from "@solid-primitives/i18n"
+import { locale as thisLocale,setLocale } from "../stores/locale"
 
 function ChangeLangMenu() {
   const [t, { locale }] = useI18n()
 
   const handleChange = (e) => {
     const lang = e.target.value
-    locale(lang)  
+    locale(lang)
+    setLocale('lang',lang)
   }
 
   return (
     <form>
       <label>{t('footer.changeLang')} </label>
       <select onChange={handleChange}>
-        <option value="es">
+        <option
+          value="es"
+          selected={thisLocale.lang === 'es'}
+        >
           {t('footer.spanish')}
         </option>
-        <option value="en">
+        <option
+          value="en"
+          selected={thisLocale.lang === 'en'}
+        >
           {t('footer.english')}
         </option>
       </select>
