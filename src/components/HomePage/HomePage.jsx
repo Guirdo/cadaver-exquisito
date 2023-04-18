@@ -1,6 +1,7 @@
 import { useNavigate } from "@solidjs/router"
 import { user, setUser } from "../../stores/user"
 import { supabase } from "../../supabase"
+import isNicknameValid from "../../helpers/isNicknameValid"
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -8,19 +9,22 @@ export default function HomePage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    try{
-      const { data } = await supabase
+    if (isNicknameValid()) {
+      try {
+        const { data } = await supabase
           .from('rooms')
-          .insert({players: [{id: user.id, nickname: user.nickname, isOwner:true}]})
+          .insert({ players: [{ id: user.id, nickname: user.nickname, isOwner: true }] })
           .select()
 
-      setUser('isOwner',true)    
-          
-      navigate(`/${data[0].id}`)
-    }catch(error){
-      console.error(error)
-    }
+        setUser('isOwner', true)
 
+        navigate(`/${data[0].id}`)
+      } catch (error) {
+        console.error(error)
+      }
+    } else {
+
+    }
   }
 
   return (
@@ -43,7 +47,7 @@ export default function HomePage() {
           id="nickname"
           name="nickname"
           value={user.nickname}
-          onInput={(e) => setUser('nickname',e.target.value)}
+          onInput={(e) => setUser('nickname', e.target.value)}
         />
 
         <button
@@ -54,7 +58,6 @@ export default function HomePage() {
           Crear sala
         </button>
       </form>
-
     </div>
   )
 }

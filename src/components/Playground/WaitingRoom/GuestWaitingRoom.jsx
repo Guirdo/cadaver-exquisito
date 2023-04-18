@@ -3,19 +3,20 @@ import { joinGuest, room } from "../../../stores/room";
 import { user, setUser } from "../../../stores/user";
 import PlayersList from "./PlayersList";
 import InvitationLink from "./InvitationLink";
+import isNicknameValid from "../../../helpers/isNicknameValid";
 
 export default function GuestWaitingRoom() {
   const [ready, setReady] = createSignal(false)
 
-  if (room.players.find(p => p.id === user.id)) setReady(true) 
+  if (room.players.find(p => p.id === user.id)) setReady(true)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    joinGuest(user.id, user.nickname)
-    setUser('isOwner', false)
-
-    setReady(true)
+    if (isNicknameValid()) {
+      joinGuest(user.id, user.nickname)
+      setReady(true)
+    }
   }
 
   return (
