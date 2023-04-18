@@ -6,6 +6,11 @@ import Playground from "./components/Playground/Playground";
 import Footer from "./components/Footer";
 import ErrorModal from './components/ErrorModal'
 import { error } from "./stores/error";
+import { validate } from "uuid";
+
+const playgroundRouteFilter = {
+  id: (id) => validate(id)
+}
 
 export default function App() {
   return (
@@ -15,8 +20,19 @@ export default function App() {
       </header>
       <main class="[ flex-column ] [ flex-grow-2 ]">
         <Routes>
-          <Route path="/" element={HomePage} />
-          <Route path="/:id" element={Playground} />
+          <Route
+            path="/"
+            element={HomePage}
+          />
+          <Route
+            path="/:id"
+            element={Playground}
+            matchFilters={playgroundRouteFilter}
+          />
+          <Route
+            path="*"
+            element={<p class="text-align-center mblock-auto">Esta página no existe </p>}
+          />
         </Routes>
       </main>
       <Footer />
