@@ -2,8 +2,10 @@ import { createEffect, createSignal } from "solid-js"
 import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
 import isMessageValid from "./ChatInput.helper"
+import { useI18n } from "@solid-primitives/i18n"
 
 export default function ChatInput() {
+  const [ t ] = useI18n()
   const [message, setMessage] = createSignal('')
   const playerTurn = room.players.findIndex(p => p.id === user.id)
   
@@ -35,7 +37,7 @@ export default function ChatInput() {
         onClick={handleSend}
         disabled={!user.allowedToWrite}
       >
-        Enviar
+        {t('chatRoom.send')}
       </button>
     </form>
   )

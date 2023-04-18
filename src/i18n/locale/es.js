@@ -17,6 +17,12 @@ const es = {
     iAmReady: '¡Estoy listo!',
     waitForStarting: 'Espera a que empiece el juego...'
   },
+  chatRoom: {
+    send: 'Enviar'
+  },
+  result: {
+    writtenBy: 'Escrito por:'
+  },
   error:{
     copied: 'Link de invitación copiado',
     copyFails: 'Perdón, no funciona en tu navegador',

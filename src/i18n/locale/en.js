@@ -17,6 +17,12 @@ const en = {
     iAmReady: "Yes, I'm",
     waitForStarting: 'Wait for the game to start...'
   },
+  chatRoom: {
+    send: 'Enviar'
+  },
+  result: {
+    writtenBy: 'Written by:'
+  },
   error: {
     copied: 'Invitation link copied',
     copyFails: "Sorry, it doesn't work in your browser",
