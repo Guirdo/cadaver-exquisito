@@ -1,7 +1,10 @@
+import { useI18n } from "@solid-primitives/i18n";
 import { room } from "../../../stores/room";
 import { user } from "../../../stores/user";
 
 export default function PlayersList() {
+  const [ t ] = useI18n()
+
   return (
     <div class="flex-column gap-xs">
       <div class="flex-row gap-sm">
@@ -24,11 +27,11 @@ export default function PlayersList() {
       </div>
 
       <small className="text-align-center">
-        <b>Jugadores:</b> {room.players.length}/{room.playersLimit}
+        <b>{t('waitingRoom.players')}</b> {room.players.length}/{room.playersLimit}
       </small>
 
       <small class="text-align-center">
-          <b>Rondas:</b> {room.rounds}
+          <b>{t('waitingRoom.rounds')}</b> {room.rounds}
       </small>
     </div>
   )

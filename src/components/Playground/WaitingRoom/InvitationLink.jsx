@@ -1,20 +1,22 @@
+import { useI18n } from "@solid-primitives/i18n";
 import { useLocation } from "@solidjs/router"
+import { setErrorMessage } from "../../../stores/error";
 
 export default function InvitationLink() {
-  const location = useLocation()
+  const [ t ] = useI18n()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location)
       .then(() => {
-        alert('¡Copiado!');
+        setErrorMessage('copied')
       })
       .catch(err => {
-        alert("Perdón, no funciona en tu navegador");
-      });
+        setErrorMessage('copyFails')
+      })
   }
   return (
     <div class="flex-column gap-xs">
-      <p class="text-align-center">Invita a tus amigos</p>
+      <p class="text-align-center">{t('waitingRoom.inviteFriends')}</p>
 
       <div class="flex-column">
 
@@ -27,7 +29,7 @@ export default function InvitationLink() {
           class="button"
           onClick={handleCopy}
         >
-          Copiar
+          {t('waitingRoom.copy')}
         </button>
       </div>
     </div>

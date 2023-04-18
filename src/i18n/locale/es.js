@@ -1,6 +1,27 @@
 const es = {
+  common:{
+    loading: 'Cargando...',
+    enterNickname: 'Ingresa tu apodo'
+  },
+  waitingRoom:{
+    waitingForEveryoneElse: 'Esperando a los demás a unirse...',
+    players: 'Jugadores:',
+    rounds: 'Rondas:',
+    inviteFriends: 'Invita a tus amigos',
+    copy: 'Copiar',
+    setMatch: 'Configura la partida',
+    numberRounds: 'Numero de rondas',
+    playersLimit: 'Limite de jugadores',
+    startGame: 'Empezar juego',
+    readyToStart: '¿Estás listo para jugar?',
+    iAmReady: '¡Estoy listo!',
+    waitForStarting: 'Espera a que empiece el juego...'
+  },
+  error:{
+    copied: 'Link de invitación copiado',
+    copyFails: 'Perdón, no funciona en tu navegador',
+  },
   homePage: {
-    enterNickname: 'Ingresa tu apodo',
     createRoom: 'Crear sala'
   },
   footer: {

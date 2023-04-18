@@ -1,13 +1,16 @@
 import { Portal } from 'solid-js/web'
 import { clearError, error } from '../../stores/error'
+import { useI18n } from '@solid-primitives/i18n'
 
 export default function ErrorModal() {
+  const [ t ] = useI18n()
+  
   return (
     <Portal>
       <div class="modal">
         <div class="modal-content">
           <p>
-            {error.message}
+            {t(`error.${error.code}`)}
           </p>
           <button
             onClick={() => clearError()}

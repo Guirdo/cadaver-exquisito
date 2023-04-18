@@ -1,22 +1,22 @@
 import { createStore } from "solid-js/store";
 
 const initialState = {
-  message: '',
+  code: '',
   isDisplayed: false
 }
 
 export const [ error, setError ] = createStore(initialState)
 
-export function setErrorMessage(message) {
+export function setErrorMessage(code) {
   setError({
-    message,
+    code: code,
     isDisplayed: true
   })
 }
 
 export function clearError() {
   setError({
-    message: '',
+    code: '',
     isDisplayed: false
   })
 }

@@ -46,7 +46,7 @@ export default function HomePage() {
           class="fw-bold "
           for="nickname"
         >
-          {t('homePage.enterNickname')}
+          {t('common.enterNickname')}
         </label>
         <input
           id="nickname"

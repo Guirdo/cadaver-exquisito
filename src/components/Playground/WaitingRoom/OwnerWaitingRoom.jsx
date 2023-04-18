@@ -1,8 +1,10 @@
+import { useI18n } from "@solid-primitives/i18n"
 import { room, setRoom, updateRoom } from "../../../stores/room"
 import InvitationLink from "./InvitationLink"
 import PlayersList from "./PlayersList"
 
 function RoomSettings() {
+  const [ t ] = useI18n()
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -24,10 +26,10 @@ function RoomSettings() {
       onSubmit={handleSubmit}
     >
       <fieldset class="flex-column gap-sm p-sm">
-        <legend>Configura la partida</legend>
+        <legend>{t('waitingRoom.setMatch')}</legend>
 
         <div class="[ flex-column ] [ gap-sm ]">
-          <label>Número de rondas</label>
+          <label>{t('waitingRoom.numberRounds')}</label>
           <input
             name="rounds"
             type="number"
@@ -39,7 +41,7 @@ function RoomSettings() {
         </div>
 
         <div class="[ flex-column ] [ gap-sm ]">
-          <label>Limite de jugadores</label>
+          <label>{t('waitingRoom.playersLimit')}</label>
           <input
             name="playersLimit"
             type="number"
@@ -55,16 +57,17 @@ function RoomSettings() {
         class="button"
         type="submit"
       >
-        Empezar juego
+        {t('waitingRoom.startGame')}
       </button>
     </form>
   )
 }
 
 export default function OwnerWaitingRoom() {
+  const [ t ] = useI18n()
   return (
     <>
-      <p>Esperando a los demás a unirse...</p>
+      <p>{t('waitingRoom.waitingForEveryoneElse')}</p>
 
       <PlayersList />
 

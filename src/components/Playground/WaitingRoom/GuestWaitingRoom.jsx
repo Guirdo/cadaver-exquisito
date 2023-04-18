@@ -4,8 +4,10 @@ import { user, setUser } from "../../../stores/user";
 import PlayersList from "./PlayersList";
 import InvitationLink from "./InvitationLink";
 import isNicknameValid from "../../../helpers/isNicknameValid";
+import { useI18n } from "@solid-primitives/i18n";
 
 export default function GuestWaitingRoom() {
+  const [ t ] = useI18n()
   const [ready, setReady] = createSignal(false)
 
   if (room.players.find(p => p.id === user.id)) setReady(true)
@@ -23,7 +25,7 @@ export default function GuestWaitingRoom() {
     <>
       <Switch>
         <Match when={!ready()}>
-          <p>¿Estas listo para jugar?</p>
+          <p>{t('waitingRoom.readyToStart')}</p>
           <form
             class="[ flex-column ] [ gap-sm ]"
             onSubmit={handleSubmit}
@@ -32,7 +34,7 @@ export default function GuestWaitingRoom() {
               class="fw-bold "
               for="nickname"
             >
-              Ingresa tu apodo
+              {t('common.enterNickname')}
             </label>
             <input
               id="nickname"
@@ -46,13 +48,13 @@ export default function GuestWaitingRoom() {
               data-type="primary"
               type="submit"
             >
-              ¡Estoy listo!
+              {t('waitingRoom.iAmReady')}
             </button>
           </form>
         </Match>
 
         <Match when={ready()}>
-          <p>Espera a que empiece el juego...</p>
+          <p>{t('waitingRoom.waitForStarting')}</p>
 
           <PlayersList />
 
