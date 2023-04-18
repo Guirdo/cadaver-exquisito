@@ -38,7 +38,7 @@ function MessageBox(props) {
 
 export default function MessageList() {
   return (
-    <div class="flex-column gap-xs">
+    <div class="flex-column gap-xs flex-grow-2">
       <For each={room.messages}>
         {(message, index) => (<MessageBox index={index()} message={message} />)}
       </For>

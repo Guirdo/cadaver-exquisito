@@ -36,7 +36,7 @@ export default function Playground() {
   }
 
   return (
-    <div class="[ flex-column ] [ gap-lg p-md align-items-center ]">
+    <div class="[ flex-column ] [ flex-grow gap-lg p-md align-items-center ]">
       <StatusSwitcher />
     </div>
   )
