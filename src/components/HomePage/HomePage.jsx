@@ -2,9 +2,12 @@ import { useNavigate } from "@solidjs/router"
 import { user, setUser } from "../../stores/user"
 import { supabase } from "../../supabase"
 import isNicknameValid from "../../helpers/isNicknameValid"
+import { onMount } from "solid-js"
 
 export default function HomePage() {
   const navigate = useNavigate()
+
+  onMount(() => setUser('isOwner', false))
 
   const handleSubmit = async (e) => {
     e.preventDefault()
