@@ -1,8 +1,11 @@
+import { Show } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 import HomePage from "./components/HomePage/HomePage";
 import Navbar from "./components/Navbar";
 import Playground from "./components/Playground/Playground";
 import Footer from "./components/Footer";
+import ErrorModal from './components/ErrorModal'
+import { error } from "./stores/error";
 
 export default function App() {
   return (
@@ -17,6 +20,9 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <Show when={error.isDisplayed}>
+        <ErrorModal />
+      </Show>
     </div>
   )
 }
