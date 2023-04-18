@@ -94,5 +94,20 @@ export async function sendMessage(message) {
 }
 
 export async function finishGame() {
-  updateRoom('status', 2)
+  //updateRoom('status', 2)
+  try{
+    const cleanPlayersList = room.players.map(p => p.nickname)
+
+    const { error } = await supabase
+        .from('rooms')
+        .update({
+          status: 2,
+          players: cleanPlayersList
+        })
+        .eq('id', room.id)
+
+    if(error) throw new Error(error.message)
+  }catch(error) {
+    console.error(error)
+  }
 }

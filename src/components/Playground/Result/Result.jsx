@@ -3,7 +3,7 @@ import { room } from "../../../stores/room";
 
 export default function Result() {
   const [ t ] = useI18n()
-  const nicknames = room.players.map(p => p.nickname)
+  
   return (
     <>
       <div>
@@ -12,7 +12,7 @@ export default function Result() {
         </For>
       </div>
 
-      <p>{t('result.writtenBy')} {nicknames.join(', ')}</p>
+      <p>{t('result.writtenBy')} {room.players.join(', ')}</p>
     </>
   )
 }
