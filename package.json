@@ -15,6 +15,7 @@
   "dependencies": {
     "@solidjs/router": "^0.8.2",
     "@supabase/supabase-js": "^2.20.0",
+    "dompurify": "^3.0.2",
     "solid-js": "^1.7.3",
     "uuid": "^9.0.0",
     "validator": "^13.9.0"
