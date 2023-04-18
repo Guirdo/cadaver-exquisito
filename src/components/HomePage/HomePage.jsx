@@ -3,9 +3,11 @@ import { user, setUser } from "../../stores/user"
 import { supabase } from "../../supabase"
 import isNicknameValid from "../../helpers/isNicknameValid"
 import { onMount } from "solid-js"
+import { useI18n } from "@solid-primitives/i18n"
 
 export default function HomePage() {
   const navigate = useNavigate()
+  const [ t ] = useI18n()
 
   onMount(() => setUser('isOwner', false))
 
@@ -44,7 +46,7 @@ export default function HomePage() {
           class="fw-bold "
           for="nickname"
         >
-          Ingresa tu apodo
+          {t('homePage.enterNickname')}
         </label>
         <input
           id="nickname"
@@ -58,7 +60,7 @@ export default function HomePage() {
           data-type="primary"
           type="submit"
         >
-          Crear sala
+          {t('homePage.createRoom')}
         </button>
       </form>
     </div>
