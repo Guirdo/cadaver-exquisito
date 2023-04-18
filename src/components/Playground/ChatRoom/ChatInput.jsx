@@ -1,6 +1,7 @@
 import { createEffect, createSignal } from "solid-js"
 import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
+import isMessageValid from "./ChatInput.helper"
 
 export default function ChatInput() {
   const [message, setMessage] = createSignal('')
@@ -13,8 +14,10 @@ export default function ChatInput() {
   const handleSend = (e) => {
     e.preventDefault()
 
-    sendMessage(message())
-    setMessage('')
+    if(isMessageValid(message())){
+      sendMessage(message())
+      setMessage('')
+    }
   }
 
   return(
