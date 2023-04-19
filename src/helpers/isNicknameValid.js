@@ -4,10 +4,10 @@ import { user } from "../stores/user"
 
 export default function isNicknameValid() {
   if (validator.isEmpty(user.nickname)) {
-    setErrorMessage('No ingresaste un apodo para jugar')
+    setErrorMessage('emptyNickname')
     return false
   } else if (!validator.isAlphanumeric(user.nickname)) {
-    setErrorMessage('Tu apodo solo debe tener caracteres alfanuméricos')
+    setErrorMessage('alphanumNickname')
     return false
   }
 

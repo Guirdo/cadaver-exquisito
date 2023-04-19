@@ -26,6 +26,8 @@ const en = {
   error: {
     copied: 'Invitation link copied',
     copyFails: "Sorry, it doesn't work in your browser",
+    emptyNickname: 'You left your nickname empty',
+    alphanumNickname: 'Your nickname just have to have alphanumeric characters'
   },
   homePage: {
     createRoom: 'Create room'
