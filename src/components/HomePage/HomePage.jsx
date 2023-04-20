@@ -1,9 +1,9 @@
 import { useNavigate } from "@solidjs/router"
 import { user, setUser } from "../../stores/user"
-import { supabase } from "../../supabase"
 import isNicknameValid from "../../helpers/isNicknameValid"
 import { onMount } from "solid-js"
 import { useI18n } from "@solid-primitives/i18n"
+import { createRoom } from "../../stores/room"
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -15,25 +15,14 @@ export default function HomePage() {
     e.preventDefault()
 
     if (isNicknameValid()) {
-      try {
-        const { data } = await supabase
-          .from('rooms')
-          .insert({ players: [{ id: user.id, nickname: user.nickname, isOwner: true }] })
-          .select()
-
-        setUser('isOwner', true)
-
-        navigate(`/${data[0].id}`)
-      } catch (error) {
-        console.error(error)
-      }
-    } else {
-
+      const roomId = await createRoom(user)
+      setUser('isOwner', true)
+      navigate(`/${roomId}`)
     }
   }
 
   return (
-    <div class="[ flex-column ] [ gap-lg p-md align-items-center ]">
+    <div class="[ flex-column ] [ mblock-auto gap-lg p-md align-items-center ]">
       <figure class="w-6rem">
         <img src="/skull.webp" />
       </figure>
@@ -57,7 +46,7 @@ export default function HomePage() {
 
         <button
           class="button"
-          data-type="primary"
+          data-type="success"
           type="submit"
         >
           {t('homePage.createRoom')}

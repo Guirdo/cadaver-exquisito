@@ -12,6 +12,19 @@ const initialState = {
 
 export const [room, setRoom] = createStore(initialState)
 
+export async function createRoom(user) {
+  try {
+    const { data } = await supabase
+      .from('rooms')
+      .insert({ players: [{ id: user.id, nickname: user.nickname, isOwner: true }] })
+      .select()
+
+      return data[0].id
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export async function fetchRoom(id) {
   try {
     const { data, error } = await supabase
