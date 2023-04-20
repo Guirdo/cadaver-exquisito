@@ -6,13 +6,16 @@
 .fs-sm {font-size: var(--fs-sm)}
 
 .color-inherit { color: inherit }
+.color-white { color: white }
 
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
 .p-md { padding: var(--s-md) }
+.p-block-sm { padding-block: var(--s-sm) }
 .p-block-md { padding-block: var(--s-md) }
 .p-inline-md { padding-inline: var(--s-md) }
 
+.w-2rem { width: 2rem }
 .w-6rem { width: 6rem }
 .w-100 { width: 100% }
 
@@ -20,7 +23,9 @@
 .min-hv-100 { min-height: 100vh }
 
 .align-items-center { align-items: center }
+.justify-content-center { justify-content: center }
 
+.gap-xxs { gap: var(--s-xxs) }
 .gap-xs { gap: var(--s-xs) }
 .gap-sm { gap: var(--s-sm) }
 .gap-md { gap: var(--s-md) }
@@ -29,6 +34,7 @@
 .flex-grow { flex-grow: 1}
 .flex-grow-2 { flex-grow: 2}
 
+.bg-primary { background-color: var(--primary-color) }
 .bg-gray { background-color: lightgray }
 .bg-blue { background-color: lightblue }
 

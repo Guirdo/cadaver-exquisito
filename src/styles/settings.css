@@ -1,17 +1,23 @@
 :root {
-  --f-scale:1.2;
+  --scale:1.15;
 
   --fs-md: clamp(1rem,1rem + 0.5vi, 1.4rem);
-  --fs-sm: calc(var(--fs-md) / var(--f-scale));
-  --fs-xs: calc(var(--fs-sm) / var(--f-scale));
-  --fs-lg: calc(var(--fs-md) * var(--f-scale));
-  --fs-xlg: calc(var(--fs-lg) * var(--f-scale));
-  --fs-xxlg: calc(var(--fs-xlg) * var(--f-scale));
+  --fs-sm: calc(var(--fs-md) / var(--scale));
+  --fs-xs: calc(var(--fs-sm) / var(--scale));
+  --fs-lg: calc(var(--fs-md) * var(--scale));
+  --fs-xlg: calc(var(--fs-lg) * var(--scale));
+  --fs-xxlg: calc(var(--fs-xlg) * var(--scale));
 
   /* Spacing */
+  --s-xxs: 0.25rem;
   --s-xs: 0.5rem;
   --s-sm: 0.75rem;
   --s-md: 1rem;
   --s-lg: 1.5rem;
   --s-xlg: 2rem;
+
+  /* Color Palette */
+  --primary-color: #80000A;
+  --success-color: #5b913f;
+  --info-color: #468080;
 }
