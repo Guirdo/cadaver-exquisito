@@ -3,13 +3,16 @@ import { user, setUser } from "../../stores/user"
 import isNicknameValid from "../../helpers/isNicknameValid"
 import { onMount } from "solid-js"
 import { useI18n } from "@solid-primitives/i18n"
-import { createRoom } from "../../stores/room"
+import { clearRoom, createRoom } from "../../stores/room"
 
 export default function HomePage() {
   const navigate = useNavigate()
   const [ t ] = useI18n()
 
-  onMount(() => setUser('isOwner', false))
+  onMount(() =>{
+    setUser('isOwner', false)
+    clearRoom()
+  })
 
   const handleSubmit = async (e) => {
     e.preventDefault()

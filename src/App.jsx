@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ErrorModal from './components/ErrorModal'
 import { error } from "./stores/error";
 import { validate } from "uuid";
+import { room } from "./stores/room";
 
 const playgroundRouteFilter = {
   id: (id) => validate(id)
@@ -18,7 +19,7 @@ export default function App() {
       <header>
         <Navbar />
       </header>
-      <main class="[ flex-column ] [ flex-grow-2 ]">
+      <main class="[ flex-column ] [ align-items-center flex-grow-2 ]">
         <Routes>
           <Route
             path="/"
@@ -35,7 +36,9 @@ export default function App() {
           />
         </Routes>
       </main>
-      <Footer />
+      <Show when={room.status !== 1}>
+        <Footer />
+      </Show>
       <Show when={error.isDisplayed}>
         <ErrorModal />
       </Show>

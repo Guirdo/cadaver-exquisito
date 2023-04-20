@@ -35,7 +35,7 @@ export default function Footer() {
   const [t] = useI18n()
 
   return (
-    <footer class="[ flex-column ] [ fs-sm gap-xs align-items-center p-xs ]">
+    <footer class="[ flex-column ] [ fs-xs gap-xs align-items-center p-xs ]">
       <ChangeLangMenu />
       <p>
         {t('footer.madeBy')} <a href="https://guirdo.xyz">Guirdo</a>

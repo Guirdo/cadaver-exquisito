@@ -12,6 +12,10 @@ const initialState = {
 
 export const [room, setRoom] = createStore(initialState)
 
+export function clearRoom() {
+  setRoom(initialState)
+}
+
 export async function createRoom(user) {
   try {
     const { data } = await supabase
