@@ -6,8 +6,23 @@ import InvitationLink from "./InvitationLink";
 import isNicknameValid from "../../../helpers/isNicknameValid";
 import { useI18n } from "@solid-primitives/i18n";
 
-export default function GuestWaitingRoom() {
+function RoomInfo() {
   const [ t ] = useI18n()
+  return (
+    <div class="flex-column gap-xs">
+      <small className="text-align-center">
+        <b>{t('waitingRoom.players')}</b> {room.players.length}/{room.playersLimit}
+      </small>
+
+      <small class="text-align-center">
+        <b>{t('waitingRoom.rounds')}</b> {room.rounds}
+      </small>
+    </div>
+  )
+}
+
+export default function GuestWaitingRoom() {
+  const [t] = useI18n()
   const [ready, setReady] = createSignal(false)
 
   if (room.players.find(p => p.id === user.id)) setReady(true)
@@ -57,6 +72,8 @@ export default function GuestWaitingRoom() {
           <p>{t('waitingRoom.waitForStarting')}</p>
 
           <PlayersList />
+
+          <RoomInfo />
 
           <InvitationLink />
         </Match>

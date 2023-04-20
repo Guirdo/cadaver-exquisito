@@ -25,14 +25,6 @@ export default function PlayersList() {
           }
         </For>
       </div>
-
-      <small className="text-align-center">
-        <b>{t('waitingRoom.players')}</b> {room.players.length}/{room.playersLimit}
-      </small>
-
-      <small class="text-align-center">
-          <b>{t('waitingRoom.rounds')}</b> {room.rounds}
-      </small>
     </div>
   )
 }
