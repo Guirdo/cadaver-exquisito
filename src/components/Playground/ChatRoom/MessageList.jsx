@@ -23,7 +23,7 @@ function MessageBox(props) {
 
       <div
         class={`
-          ${isUserMessage() ? 'bg-blue' : 'bg-gray'}
+          ${isUserMessage() ? 'bg-info color-white' : 'bg-secondary'}
           flex-grow p-xs
         `}
       >

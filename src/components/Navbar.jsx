@@ -1,16 +1,26 @@
 import { A } from "@solidjs/router";
 
 export default function Navbar() {
-  return(
-    <nav className="p-block-md">
+  return (
+    <nav className="[ flex-row ] [ bg-primary color-white gap-xxs align-items-center justify-content-center p-block-sm ]">
+      <figure class="w-2rem">
+        <img
+          src="/skull.webp"
+        />
+      </figure>
       <h1 className="text-align-center">
         <A
           class="text-dec-none color-inherit"
           href="/"
         >
-          💀Cadaver exquisito🍷
+          Cadaver exquisito
         </A>
       </h1>
+      <figure class="w-2rem">
+        <img
+          src="/wine.webp"
+        />
+      </figure>
     </nav>
   )
 }

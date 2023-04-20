@@ -6,9 +6,9 @@ export default function Result() {
   
   return (
     <>
-      <div>
+      <div class="wrapper w-100">
         <For each={room.messages}>
-          {(message) => <p>{message}</p>}
+          {(message) => <p class="ow-break-word text-align-center">{message}</p>}
         </For>
       </div>
 

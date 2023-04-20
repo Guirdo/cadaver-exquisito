@@ -8,4 +8,5 @@
 
 .button[data-type="info"] {
   background-color: var(--info-color);
+  color: white;
 }

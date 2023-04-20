@@ -1,0 +1,11 @@
+.playground {
+  width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+  .playground { width: 80% }
+}
+
+@media screen and (min-width: 68rem) {
+  .playground { width: 50% }
+}

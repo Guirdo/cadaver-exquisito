@@ -21,12 +21,13 @@ export default function InvitationLink() {
       <div class="flex-column">
 
         <input
-          class="p-xs fs-sm"
+          class="fs-sm"
           readOnly
           value={window.location}
         />
         <button
           class="button"
+          data-type="info"
           onClick={handleCopy}
         >
           {t('waitingRoom.copy')}

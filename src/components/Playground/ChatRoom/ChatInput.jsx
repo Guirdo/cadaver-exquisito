@@ -33,6 +33,7 @@ export default function ChatInput() {
 
       <button
         class="button"
+        data-type="success"
         type="submit"
         onClick={handleSend}
         disabled={!user.allowedToWrite}

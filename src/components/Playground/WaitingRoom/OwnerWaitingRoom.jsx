@@ -55,6 +55,7 @@ function RoomSettings() {
 
       <button
         class="button"
+        data-type="success"
         type="submit"
       >
         {t('waitingRoom.startGame')}

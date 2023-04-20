@@ -1,5 +1,6 @@
 .text-dec-none { text-decoration: none }
 .text-align-center { text-align: center }
+.ow-break-word { word-wrap: break-word }
 .fw-bold { font-weight: bold }
 
 .fs-xs {font-size: var(--fs-xs)}
@@ -35,7 +36,15 @@
 .flex-grow-2 { flex-grow: 2}
 
 .bg-primary { background-color: var(--primary-color) }
-.bg-gray { background-color: lightgray }
-.bg-blue { background-color: lightblue }
+.bg-secondary { background-color: var(--secondary-color) }
+.bg-info { background-color: var(--info-color) }
 
 .mblock-auto { margin-block: auto }
+
+@media screen and (max-width: 50rem) {
+  .md-w-75 { width: 75% }
+}
+
+@media screen and (min-width: 68rem) {
+  .lg-w-50 { width: 50% }
+}

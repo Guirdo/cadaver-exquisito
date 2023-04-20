@@ -13,6 +13,8 @@ export default function ErrorModal() {
             {t(`error.${error.code}`)}
           </p>
           <button
+            class="button"
+            data-type="info"
             onClick={() => clearError()}
           >
             Ok

@@ -60,7 +60,7 @@ export default function GuestWaitingRoom() {
 
             <button
               class="button"
-              data-type="primary"
+              data-type="success"
               type="submit"
             >
               {t('waitingRoom.iAmReady')}
