@@ -1,11 +1,11 @@
 import DOMPurify from 'dompurify'
-import validator from 'validator'
+import isEmpty from "validator/es/lib/isEmpty"
 import { setErrorMessage } from '../../../stores/error'
 
 export default function isMessageValid(message) {
   const sanitizedText = sanitizeText(message)
 
-  if(validator.isEmpty(sanitizedText)) {
+  if(isEmpty(sanitizedText)) {
     setErrorMessage('Has dejado el campo vació o has ingresado un mensaje invalido')
     return false
   }
