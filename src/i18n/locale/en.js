@@ -18,7 +18,7 @@ const en = {
     waitForStarting: 'Wait for the game to start...'
   },
   chatRoom: {
-    send: 'Enviar'
+    send: 'Send'
   },
   result: {
     writtenBy: 'Written by:'
@@ -27,7 +27,8 @@ const en = {
     copied: 'Invitation link copied',
     copyFails: "Sorry, it doesn't work in your browser",
     emptyNickname: 'You left your nickname empty',
-    alphanumNickname: 'Your nickname just have to have alphanumeric characters'
+    alphanumNickname: 'Your nickname just have to have alphanumeric characters',
+    invalidMessage: "You've tried to enter an invalid message"
   },
   homePage: {
     createRoom: 'Create room'

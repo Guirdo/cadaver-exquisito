@@ -27,7 +27,8 @@ const es = {
     copied: 'Link de invitación copiado',
     copyFails: 'Perdón, no funciona en tu navegador',
     emptyNickname: 'No ingresaste un apodo para jugar',
-    alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos'
+    alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
+    invalidMessage: 'Has intentado ingresar un mensaje invalido'
   },
   homePage: {
     createRoom: 'Crear sala'
