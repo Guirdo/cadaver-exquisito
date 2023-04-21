@@ -8,6 +8,8 @@
 
 .color-inherit { color: inherit }
 .color-white { color: white }
+.color-primary { color: var(--primary-color) }
+.color-success { color: var(--success-color) }
 
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
@@ -25,6 +27,7 @@
 
 .align-items-center { align-items: center }
 .justify-content-center { justify-content: center }
+.justify-content-between { justify-content: space-between }
 
 .gap-xxs { gap: var(--s-xxs) }
 .gap-xs { gap: var(--s-xs) }
@@ -40,11 +43,3 @@
 .bg-info { background-color: var(--info-color) }
 
 .mblock-auto { margin-block: auto }
-
-@media screen and (max-width: 50rem) {
-  .md-w-75 { width: 75% }
-}
-
-@media screen and (min-width: 68rem) {
-  .lg-w-50 { width: 50% }
-}
