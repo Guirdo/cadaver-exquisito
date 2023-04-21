@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div class="[ flex-column ] [ mblock-auto gap-lg p-md align-items-center ]">
       <figure class="w-6rem">
-        <img src="/skull.webp" />
+        <img src="/icons/skull.webp" />
       </figure>
 
       <form

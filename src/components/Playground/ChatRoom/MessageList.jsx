@@ -16,7 +16,7 @@ function MessageBox(props) {
       }
     >
       <img
-        src="/skull.webp"
+        src="/icons/skull.webp"
         width="40"
         height="40"
       />

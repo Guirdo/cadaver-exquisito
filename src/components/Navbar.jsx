@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="[ flex-row ] [ bg-primary color-white gap-xxs align-items-center justify-content-center p-block-sm ]">
       <figure class="w-2rem">
         <img
-          src="/skull.webp"
+          src="/icons/skull.webp"
         />
       </figure>
       <h1 className="text-align-center">
@@ -18,7 +18,7 @@ export default function Navbar() {
       </h1>
       <figure class="w-2rem">
         <img
-          src="/wine.webp"
+          src="/icons/wine.webp"
         />
       </figure>
     </nav>

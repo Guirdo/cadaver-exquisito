@@ -13,7 +13,7 @@ export default function PlayersList() {
             (player) => (
               <div class="flex-column align-items-center">
                 <img
-                  src="/skull.webp"
+                  src="/icons/skull.webp"
                   width="64"
                 />
 
