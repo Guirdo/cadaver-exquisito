@@ -1,8 +1,7 @@
 import { createLocalStore } from "../utils/createLocalStore";
-import { v4 as uuidv4 } from 'uuid'
 
 const initialState = {
-  id: uuidv4(),
+  id: crypto.randomUUID(),
   nickname: 'MuertadoLopez',
   allowedToWrite: false,
   isOwner: false

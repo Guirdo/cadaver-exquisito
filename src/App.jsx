@@ -6,11 +6,11 @@ import Playground from "./components/Playground/Playground";
 import Footer from "./components/Footer";
 import ErrorModal from './components/ErrorModal'
 import { error } from "./stores/error";
-import { validate } from "uuid";
+import isUUID from 'validator/es/lib/isUUID'
 import { room } from "./stores/room";
 
 const playgroundRouteFilter = {
-  id: (id) => validate(id)
+  id: (id) => isUUID(id,4)
 }
 
 export default function App() {
