@@ -18,7 +18,8 @@ const es = {
     waitForStarting: 'Espera a que empiece el juego...'
   },
   chatRoom: {
-    send: 'Enviar'
+    send: 'Enviar',
+    roundXOfY: 'Ronda {{ current }} de {{ total }}'
   },
   result: {
     writtenBy: 'Escrito por:'
