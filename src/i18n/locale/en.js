@@ -28,7 +28,9 @@ const en = {
     copyFails: "Sorry, it doesn't work in your browser",
     emptyNickname: 'You left your nickname empty',
     alphanumNickname: 'Your nickname just have to have alphanumeric characters',
-    invalidMessage: "You've tried to enter an invalid message"
+    invalidMessage: "You've tried to enter an invalid message",
+    minimunPlayers: "In order to have fun, it's better to start with at least 3 players",
+    playersLimitReached: 'Sorry, the room has reached its players limit'
   },
   homePage: {
     createRoom: 'Create room'

@@ -28,7 +28,9 @@ const es = {
     copyFails: 'Perdón, no funciona en tu navegador',
     emptyNickname: 'No ingresaste un apodo para jugar',
     alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
-    invalidMessage: 'Has intentado ingresar un mensaje invalido'
+    invalidMessage: 'Has intentado ingresar un mensaje invalido',
+    minimunPlayers: 'Para poder jugar mejor, es preferible tener tres jugadores',
+    playersLimitReached: 'Lo siento, la sala ya esta llena'
   },
   homePage: {
     createRoom: 'Crear sala'
