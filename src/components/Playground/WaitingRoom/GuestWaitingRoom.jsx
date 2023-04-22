@@ -39,8 +39,8 @@ export default function GuestWaitingRoom() {
   return (
     <>
       <Switch>
-        <Match when={room.players.length === room.playersLimit}>
-          <p>t('error.playersLimitReached')</p>
+        <Match when={room.players.length === room.playersLimit && !ready()}>
+          <p>{t('error.playersLimitReached')}</p>
         </Match>
         <Match when={!ready()}>
           <p>{t('waitingRoom.readyToStart')}</p>
