@@ -14,7 +14,7 @@ export default function ChatRoom() {
   })
 
   return (
-    <div class="[ flex-column ] [ gap-xs flex-grow ]">
+    <div class="[ flex-column ] [ pos-relative gap-xs flex-grow ]">
       <MessageList />
 
       <ChatInput />

@@ -7,7 +7,7 @@ import { useI18n } from "@solid-primitives/i18n"
 export default function ChatInput() {
   const [t] = useI18n()
   const [message, setMessage] = createSignal('')
-  const [charCount, setChatCount] = createSignal(0)
+  const [charCount, setCharCount] = createSignal(0)
   const [enable, setEnable] = createSignal(false)
   const playerTurn = room.players.findIndex(p => p.id === user.id)
   const charLimit = 70;
@@ -19,7 +19,7 @@ export default function ChatInput() {
   const handleInput = (e) => {
     const input = e.target.value
     setMessage(input)
-    setChatCount(input.length)
+    setCharCount(input.length)
 
     if (input.length > charLimit || input.length === 0) {
       setEnable(false)
@@ -29,11 +29,7 @@ export default function ChatInput() {
   }
 
   const isDisabled = () => {
-    if (user.allowedToWrite && enable()) {
-      return false
-    } else {
-      return true
-    }
+    return user.allowedToWrite && enable() ? false : true
   }
 
   const handleSend = (e) => {
@@ -45,34 +41,39 @@ export default function ChatInput() {
     }
 
     setMessage('')
-    setChatCount(0)
+    setCharCount(0)
   }
 
   return (
-    <form class="[ flex-row ] [ gap-xs ]">
-      <textarea
-        class="flex-grow"
-        rows={3}
-        value={message()}
-        disabled={!user.allowedToWrite}
-        onInput={handleInput}
-      />
+    <form class="[ flex-column ] [ gap-xs ]">
+      <Show when={user.allowedToWrite}>
+        <span class="fw-bold color-success">{t('chatRoom.yourTurn')}</span>
+      </Show>
+      <div class="[ flex-row ] [ gap-xs ]">
+        <textarea
+          class="flex-grow"
+          rows={3}
+          value={message()}
+          disabled={!user.allowedToWrite}
+          onInput={handleInput}
+        />
 
-      <div class="[ flex-column ] [ justify-content-between gap-xs ]">
-        <button
-          class="button"
-          data-type="success"
-          type="submit"
-          onClick={handleSend}
-          disabled={isDisabled()}
-        >
-          {t('chatRoom.send')}
-        </button>
-        <span
-          class={isDisabled() ? 'color-primary' : 'color-success'}
-        >
-          {charCount()}/{charLimit}
-        </span>
+        <div class="[ flex-column ] [ justify-content-between gap-xs ]">
+          <button
+            class="button"
+            data-type="success"
+            type="submit"
+            onClick={handleSend}
+            disabled={isDisabled()}
+          >
+            {t('chatRoom.send')}
+          </button>
+          <span
+            class={isDisabled() ? 'color-primary' : 'color-success'}
+          >
+            {charCount()}/{charLimit}
+          </span>
+        </div>
       </div>
     </form>
   )

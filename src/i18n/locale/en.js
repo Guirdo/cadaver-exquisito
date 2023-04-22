@@ -19,7 +19,8 @@ const en = {
   },
   chatRoom: {
     send: 'Send',
-    roundXOfY: 'Round {{ current }} of {{ total }}'
+    roundXOfY: 'Round {{ current }} of {{ total }}',
+    yourTurn: 'Your turn'
   },
   result: {
     writtenBy: 'Written by:'
