@@ -1,4 +1,4 @@
-import { Show } from "solid-js";
+import { Show, onMount } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 import HomePage from "./components/HomePage/HomePage";
 import Navbar from "./components/Navbar";
@@ -8,12 +8,15 @@ import ErrorModal from './components/ErrorModal'
 import { error } from "./stores/error";
 import isUUID from 'validator/es/lib/isUUID'
 import { room } from "./stores/room";
+import { locale } from "./stores/locale";
 
 const playgroundRouteFilter = {
   id: (id) => isUUID(id,4)
 }
 
 export default function App() {
+  onMount(() => document.documentElement.setAttribute("lang", locale.lang))
+
   return (
     <div class="[ flex-column ] [ min-hv-100 ]">
       <header>

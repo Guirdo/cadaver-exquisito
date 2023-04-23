@@ -8,6 +8,7 @@ function ChangeLangMenu() {
     const lang = e.target.value
     locale(lang)
     setLocale('lang',lang)
+    document.documentElement.setAttribute("lang", lang);
   }
 
   return (
