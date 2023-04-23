@@ -32,7 +32,8 @@ const en = {
     alphanumNickname: 'Your nickname just have to have alphanumeric characters',
     invalidMessage: "You've tried to enter an invalid message",
     minimunPlayers: "In order to have fun, it's better to start with at least 3 players",
-    playersLimitReached: 'Sorry, the room has reached its players limit'
+    playersLimitReached: 'Sorry, the room has reached its players limit',
+    lengthNickname: 'Your nickname should have between 2 or 20 characters'
   },
   homePage: {
     createRoom: 'Create room'
