@@ -69,11 +69,12 @@ ol,ul {
   margin-inline-start: var(--s-xlg);
 }
 
-input {
+input,
+textarea,
+select {
   padding: var(--s-xxs);
 }
 
 textarea {
   resize: none;
-  padding: var(--s-xxs);
 }
