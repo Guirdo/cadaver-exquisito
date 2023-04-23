@@ -37,6 +37,7 @@
 
 .flex-grow { flex-grow: 1}
 .flex-grow-2 { flex-grow: 2}
+.flex-wrap { flex-wrap: wrap }
 
 .bg-primary { background-color: var(--primary-color) }
 .bg-secondary { background-color: var(--secondary-color) }

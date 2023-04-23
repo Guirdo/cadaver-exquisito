@@ -6,12 +6,11 @@ export default function PlayersList() {
   const [ t ] = useI18n()
 
   return (
-    <div class="flex-column gap-xs">
-      <div class="flex-row gap-sm">
+    <div class="[ flex-row ] [ gap-sm ]">
         <For each={room.players}>
           {
             (player) => (
-              <div class="flex-column align-items-center">
+              <div class="[ flex-column ] [ align-items-center ]">
                 <img
                   src="/icons/skull.webp"
                   width="64"
@@ -25,6 +24,5 @@ export default function PlayersList() {
           }
         </For>
       </div>
-    </div>
   )
 }
