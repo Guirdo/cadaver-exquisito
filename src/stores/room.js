@@ -96,6 +96,20 @@ export async function updateRoom(column, value) {
   }
 }
 
+export async function startGame() {
+  try {
+    await supabase
+        .from('rooms')
+        .update({
+          playersLimit: room.players.length,
+          status: 1
+        })
+        .eq('id',room.id)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export async function sendMessage(message) {
   try {
     const messages = unwrap(room.messages).map(e => e)
@@ -111,7 +125,6 @@ export async function sendMessage(message) {
 }
 
 export async function finishGame() {
-  //updateRoom('status', 2)
   try{
     const cleanPlayersList = room.players.map(p => p.nickname)
 

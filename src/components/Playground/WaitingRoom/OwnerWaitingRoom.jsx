@@ -1,5 +1,5 @@
 import { useI18n } from "@solid-primitives/i18n"
-import { room, setRoom, updateRoom } from "../../../stores/room"
+import { room, setRoom, startGame, updateRoom } from "../../../stores/room"
 import InvitationLink from "./InvitationLink"
 import PlayersList from "./PlayersList"
 import isEmpty from 'validator/es/lib/isEmpty'
@@ -14,8 +14,7 @@ function RoomSettings() {
     if (room.players.length < 3) {
       setErrorMessage('minimumPlayers')
     } else {
-      updateRoom('status', 1)
-      clearError()
+      startGame()
     }
   }
 
