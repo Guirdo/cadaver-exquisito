@@ -31,9 +31,10 @@ const en = {
     emptyNickname: 'You left your nickname empty',
     alphanumNickname: 'Your nickname just have to have alphanumeric characters',
     invalidMessage: "You've tried to enter an invalid message",
-    minimunPlayers: "In order to have fun, it's better to start with at least 3 players",
+    minimumPlayers: "In order to have fun, it's better to start with at least 3 players",
     playersLimitReached: 'Sorry, the room has reached its players limit',
-    lengthNickname: 'Your nickname should have between 2 or 20 characters'
+    lengthNickname: 'Your nickname should have between 2 or 20 characters',
+    gameInProgress: 'This game is in progress, you can not join it'
   },
   homePage: {
     createRoom: 'Create room'

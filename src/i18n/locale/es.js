@@ -31,9 +31,10 @@ const es = {
     emptyNickname: 'No ingresaste un apodo para jugar',
     alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
     invalidMessage: 'Has intentado ingresar un mensaje invalido',
-    minimunPlayers: 'Para poder jugar mejor, es preferible tener tres jugadores',
+    minimumPlayers: 'Para poder jugar mejor, es preferible tener tres jugadores',
     playersLimitReached: 'Lo siento, la sala ya esta llena',
-    lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres'
+    lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres',
+    gameInProgress: 'Este juego esta en progreso, ya no puedes unirte'
   },
   homePage: {
     createRoom: 'Crear sala'
