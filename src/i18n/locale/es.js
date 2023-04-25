@@ -36,6 +36,9 @@ const es = {
     lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres',
     gameInProgress: 'Este juego esta en progreso, ya no puedes unirte'
   },
+  links: {
+    donate: 'Invítame un café ☕',
+  },
   homePage: {
     createRoom: 'Crear sala'
   },

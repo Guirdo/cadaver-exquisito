@@ -36,6 +36,9 @@ const en = {
     lengthNickname: 'Your nickname should have between 2 or 20 characters',
     gameInProgress: 'This game is in progress, you can not join it'
   },
+  links: {
+    donate: 'Buy me a coffee ☕',
+  },
   homePage: {
     createRoom: 'Create room'
   },
