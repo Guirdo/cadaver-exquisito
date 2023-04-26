@@ -13,7 +13,7 @@ export default function Navbar() {
           class="text-dec-none color-inherit"
           href="/"
         >
-          Cadaver exquisito
+          Cadáver exquisito
         </A>
       </h1>
       <figure class="w-2rem">
