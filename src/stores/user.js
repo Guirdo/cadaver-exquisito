@@ -2,7 +2,7 @@ import { createLocalStore } from "../utils/createLocalStore";
 
 const initialState = {
   id: crypto.randomUUID(),
-  nickname: 'MuertadoLopez',
+  nickname: 'FlacoLopez',
   allowedToWrite: false,
   isOwner: false
 }
