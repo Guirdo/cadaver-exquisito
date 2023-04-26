@@ -40,7 +40,10 @@ const es = {
     donate: 'Invítame un café ☕',
   },
   homePage: {
-    createRoom: 'Crear sala'
+    createRoom: 'Crear sala',
+    about: 'Acerca de',
+    description1: '💀Cadáver Exquisito🍷es un juego de palabras donde tus amigos y tú escriben juntos un poema o historia, pero solo podrás ver lo que la persona anterior escribió.',
+    description2: 'Lo que verán al final de la partida será fruto del consciente colectivo de su grupo.'
   },
   footer: {
     changeLang: 'Cambiar idioma:',

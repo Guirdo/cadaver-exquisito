@@ -4,6 +4,7 @@ import isNicknameValid from "../../helpers/isNicknameValid"
 import { onMount } from "solid-js"
 import { useI18n } from "@solid-primitives/i18n"
 import { clearRoom, createRoom } from "../../stores/room"
+import InfoSection from "./InfoSection"
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -25,7 +26,7 @@ export default function HomePage() {
   }
 
   return (
-    <div class="[ flex-column ] [ mblock-auto gap-lg p-md align-items-center ]">
+    <div class="[ flex-column ] [ w-100 gap-lg p-md align-items-center ]">
       <figure class="w-6rem">
         <img src="/icons/skull.webp" />
       </figure>
@@ -55,6 +56,8 @@ export default function HomePage() {
           {t('homePage.createRoom')}
         </button>
       </form>
+
+      <InfoSection />
     </div>
   )
 }

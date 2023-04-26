@@ -40,7 +40,10 @@ const en = {
     donate: 'Buy me a coffee ☕',
   },
   homePage: {
-    createRoom: 'Create room'
+    createRoom: 'Create room',
+    about: 'About',
+    description1: '💀Cadáver Exquisito🍷is a wordplay where your friends and you write a poem or story together, but you just could see what the previous person wrote.',
+    description2: 'At the end of the game, you will see the result of the collective consciousness of your group.'
   },
   footer: {
     changeLang: 'Change language:',
