@@ -15,7 +15,8 @@ const es = {
     startGame: 'Empezar juego',
     readyToStart: '¿Estás listo para jugar?',
     iAmReady: '¡Estoy listo!',
-    waitForStarting: 'Espera a que empiece el juego...'
+    waitForStarting: 'Espera a que empiece el juego...',
+    you: '(Tú)'
   },
   chatRoom: {
     send: 'Enviar',

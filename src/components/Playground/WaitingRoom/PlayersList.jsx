@@ -17,7 +17,7 @@ export default function PlayersList() {
                 />
 
                 <small class="fw-bold">
-                  {player.nickname} {`${player.id === user.id ? '(You)' : ''}`}
+                  {player.nickname} {`${player.id === user.id ? t('waitingRoom.you') : ''}`}
                 </small>
               </div>
             )

@@ -13,9 +13,10 @@ const en = {
     numberRounds: 'Number of rounds',
     playersLimit: 'Players limit',
     startGame: 'Start Game',
-    readyToStart: 'are you ready to play?',
-    iAmReady: "Yes, I'm",
-    waitForStarting: 'Wait for the game to start...'
+    readyToStart: 'Are you ready to play?',
+    iAmReady: "Yes, I'm!",
+    waitForStarting: 'Wait for the game to start...',
+    you: '(You)'
   },
   chatRoom: {
     send: 'Send',
