@@ -35,7 +35,8 @@ const es = {
     minimumPlayers: 'Para poder jugar mejor, es preferible tener tres jugadores',
     playersLimitReached: 'Lo siento, la sala ya esta llena',
     lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres',
-    gameInProgress: 'Este juego esta en progreso, ya no puedes unirte'
+    gameInProgress: 'Este juego esta en progreso, ya no puedes unirte',
+    pageNotFound: 'Esta página no existe'
   },
   links: {
     donate: 'Invítame un café ☕',

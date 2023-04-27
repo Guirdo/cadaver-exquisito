@@ -35,7 +35,8 @@ const en = {
     minimumPlayers: "In order to have fun, it's better to start with at least 3 players",
     playersLimitReached: 'Sorry, the room has reached its players limit',
     lengthNickname: 'Your nickname should have between 2 or 20 characters',
-    gameInProgress: 'This game is in progress, you can not join it'
+    gameInProgress: 'This game is in progress, you can not join it',
+    pageNotFound: "This page does not exist"
   },
   links: {
     donate: 'Buy me a coffee ☕',
