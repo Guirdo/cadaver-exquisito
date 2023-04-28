@@ -1,16 +1,21 @@
 import { useI18n } from "@solid-primitives/i18n";
-import { useLocation } from "@solidjs/router"
 import { setErrorMessage } from "../../../stores/error";
+import { createSignal } from "solid-js";
 
 export default function InvitationLink() {
-  const [ t ] = useI18n()
+  const [isWaiting, setIsWaiting] = createSignal(false)
+  const [t] = useI18n()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location)
       .then(() => {
-        setErrorMessage('copied')
+        setIsWaiting(true)
+
+        setTimeout(() => {
+          setIsWaiting(false)
+        }, 1200)
       })
-      .catch(err => {
+      .catch(() => {
         setErrorMessage('copyFails')
       })
   }
@@ -27,10 +32,10 @@ export default function InvitationLink() {
         />
         <button
           class="button"
-          data-type="info"
+          data-type={isWaiting() ? 'info-outline' : 'info'}
           onClick={handleCopy}
         >
-          {t('waitingRoom.copy')}
+          {isWaiting() ? t('waitingRoom.copied') : t('waitingRoom.copy')}
         </button>
       </div>
     </div>
