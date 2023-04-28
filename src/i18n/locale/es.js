@@ -9,6 +9,7 @@ const es = {
     rounds: 'Rondas:',
     inviteFriends: 'Invita a tus amigos',
     copy: 'Copiar',
+    copied: 'Copiado',
     setMatch: 'Configura la partida',
     numberRounds: 'Numero de rondas',
     playersLimit: 'Limite de jugadores',
@@ -27,7 +28,6 @@ const es = {
     writtenBy: 'Escrito por:'
   },
   error:{
-    copied: 'Link de invitación copiado',
     copyFails: 'Perdón, no funciona en tu navegador',
     emptyNickname: 'No ingresaste un apodo para jugar',
     alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
