@@ -11,3 +11,9 @@
   background-color: var(--info-color);
   color: white;
 }
+
+.button[data-type="info-outline"] {
+  background-color: white;
+  border: 1px solid var(--info-color);
+  color: var(--info-color);
+}
