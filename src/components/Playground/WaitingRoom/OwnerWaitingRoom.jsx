@@ -2,8 +2,8 @@ import { useI18n } from "@solid-primitives/i18n"
 import { room, setRoom, startGame, updateRoom } from "../../../stores/room"
 import InvitationLink from "./InvitationLink"
 import PlayersList from "./PlayersList"
-import isEmpty from 'validator/es/lib/isEmpty'
-import { clearError, setErrorMessage } from "../../../stores/error"
+import { setErrorMessage } from "../../../stores/error"
+import { For } from "solid-js"
 
 function RoomSettings() {
   const [t] = useI18n()
@@ -21,10 +21,8 @@ function RoomSettings() {
   const handleChange = (e) => {
     try {
       const value = e.target.value
-      if (!isEmpty(value)) {
-        setRoom(e.target.name, value)
-        updateRoom(e.target.name, value)
-      }
+      setRoom(e.target.name, value)
+      updateRoom(e.target.name, value)
     } catch (error) {
       console.log(error)
     }
@@ -40,26 +38,30 @@ function RoomSettings() {
 
         <div class="[ flex-column ] [ gap-sm ]">
           <label>{t('waitingRoom.numberRounds')}</label>
-          <input
+          <select
             name="rounds"
-            type="number"
-            min={3}
-            max={7}
-            value={room.rounds}
             onInput={handleChange}
-          />
+          >
+            <For each={[3, 4, 5, 6, 7]}>
+              {
+                (value) => (<option value={value}>{value}</option>)
+              }
+            </For>
+          </select>
         </div>
 
         <div class="[ flex-column ] [ gap-sm ]">
           <label>{t('waitingRoom.playersLimit')}</label>
-          <input
+          <select
             name="playersLimit"
-            type="number"
-            min={3}
-            max={7}
-            value={room.playersLimit}
             onInput={handleChange}
-          />
+          >
+            <For each={[3, 4, 5, 6, 7]}>
+              {
+                (value) => (<option value={value}>{value}</option>)
+              }
+            </For>
+          </select>
         </div>
       </fieldset>
 
