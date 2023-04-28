@@ -1,9 +1,11 @@
 import { Match, Switch } from "solid-js";
 import { useParams } from "@solidjs/router";
-import WaitingRoom from "./WaitingRoom/WaitingRoom";
 import { room, fetchRoom, subscribeToRoomChanges } from "../../stores/room";
-import ChatRoom from "./ChatRoom/ChatRoom";
-import Result from "./Result/Result";
+import { lazy } from 'solid-js'
+
+const WaitingRoom = lazy(() => import('./WaitingRoom/WaitingRoom'))
+const ChatRoom = lazy(() => import('./ChatRoom/ChatRoom'))
+const Result = lazy(() => import('./Result/Result'))
 
 function StatusSwitcher() {
   return (
@@ -28,7 +30,7 @@ function StatusSwitcher() {
 }
 
 export default function Playground() {
-  const params = useParams();
+  const params = useParams()
   fetchRoom(params.id)
 
   if (room.status < 2) {
