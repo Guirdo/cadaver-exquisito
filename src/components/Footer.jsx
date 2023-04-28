@@ -40,6 +40,7 @@ function ImportantLinks() {
         <a
           class="color-inherit"
           href="https://ko-fi.com/guirdo"
+          target="_blank"
         >
           {t('links.donate')}
         </a>
@@ -58,7 +59,7 @@ export default function Footer() {
         <ImportantLinks />
 
         <p>
-          {t('footer.madeBy')} <a href="https://guirdo.xyz">Guirdo</a>
+          {t('footer.madeBy')} <a href="https://guirdo.xyz" target="_blank">Guirdo</a>
         </p>
       </div>
     </footer>
