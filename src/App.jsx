@@ -1,7 +1,8 @@
 import { Show, onMount } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 import Navbar from "./components/Navbar";
-import Playground from "./components/Playground/Playground";
+import Playground from "./components/Playground";
+import Result from "./components/Result";
 import Footer from "./components/Footer";
 import { error } from "./stores/error";
 import isUUID from 'validator/es/lib/isUUID'
@@ -34,6 +35,11 @@ export default function App() {
           />
           <Route
             path="/:id"
+            element={Result}
+            matchFilters={playgroundRouteFilter}
+          />
+          <Route
+            path="/p/:id"
             element={Playground}
             matchFilters={playgroundRouteFilter}
           />
