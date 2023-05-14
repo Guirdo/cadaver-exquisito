@@ -5,7 +5,6 @@ import { lazy } from 'solid-js'
 
 const WaitingRoom = lazy(() => import('./WaitingRoom/WaitingRoom'))
 const ChatRoom = lazy(() => import('./ChatRoom/ChatRoom'))
-const Result = lazy(() => import('./Result/Result'))
 
 function StatusSwitcher() {
   return (
@@ -20,10 +19,6 @@ function StatusSwitcher() {
         <Match when={room.status === 1}>
           <ChatRoom />
         </Match>
-
-        <Match when={room.status === 2}>
-          <Result />
-        </Match>
       </Switch>
     </>
   )
@@ -32,10 +27,7 @@ function StatusSwitcher() {
 export default function Playground() {
   const params = useParams()
   fetchRoom(params.id)
-
-  if (room.status < 2) {
-    subscribeToRoomChanges()
-  }
+  subscribeToRoomChanges()
 
   return (
     <div class="[ playground ] [ flex-column ] [ flex-grow gap-lg p-sm align-items-center ]">
