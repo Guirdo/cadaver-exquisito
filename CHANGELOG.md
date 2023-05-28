@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.1.0"></a>
+## 1.1.0 (2023-05-14)
+
+### Changed
+
+- ⚡ Add Result route [[d3d80ad](https://github.com/Guirdo/cadaver-exquisito/commit/d3d80ad4844d2550e9e52348976d26f88f1ecea9)]
+- 🚚 Move Result component to its own folder [[23a89e3](https://github.com/Guirdo/cadaver-exquisito/commit/23a89e3a9123f50fe487993fea4aa35e58a1f58b)]
+- 🗃️ Add Result.helper for fetching a result [[f7f70b3](https://github.com/Guirdo/cadaver-exquisito/commit/f7f70b37460818f708cc286053ca0e42cc909996)]
+
+### Miscellaneous
+
+- 🧩 Add PlayerList component [[b14bb14](https://github.com/Guirdo/cadaver-exquisito/commit/b14bb14faced13a4b85498d11c6e66527ea7175c)]
+- 🧩 Add MessageList component [[115a43c](https://github.com/Guirdo/cadaver-exquisito/commit/115a43cc902e651e6a6dd26acf5aa0a9302916f1)]
+- ⚰️ Remove Result component from Playground [[50db1fd](https://github.com/Guirdo/cadaver-exquisito/commit/50db1fd283b1b8b4fa9ff56eedeaca3c4dcc5cbd)]
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2023-04-28)
 
