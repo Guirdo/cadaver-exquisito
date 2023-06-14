@@ -1,5 +1,4 @@
 import { useI18n } from "@solid-primitives/i18n"
-import { room } from "../../stores/room"
 
 export default function PlayerList(props) {
   const [t] = useI18n()
