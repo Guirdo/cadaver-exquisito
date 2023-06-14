@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.1.1"></a>
+## 1.1.1 (2023-06-14)
+
+### Changed
+
+- 🚚 Move Result component to Playground folder [[f35a3fb](https://github.com/Guirdo/cadaver-exquisito/commit/f35a3fbf2cd5de801326628a57e2fcd25d0447ef)]
+
+### Miscellaneous
+
+-  Merge pull request [#1](https://github.com/Guirdo/cadaver-exquisito/issues/1) from Guirdo/revert-bad-changes [[909a880](https://github.com/Guirdo/cadaver-exquisito/commit/909a88092a53e1fc8cb3dd1bed538337035da94f)]
+- 🩹 Return Result component to Playground [[6ee1ab8](https://github.com/Guirdo/cadaver-exquisito/commit/6ee1ab871ce06dd8fd979162b7e757d658b22c03)]
+- ⚰️ Remove /p/:id route for Result page [[d581cf8](https://github.com/Guirdo/cadaver-exquisito/commit/d581cf844ef0f56af58ad1fcf599d023c496073e)]
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2023-05-14)
 
