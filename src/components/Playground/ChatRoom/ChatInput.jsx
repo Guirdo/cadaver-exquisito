@@ -3,6 +3,7 @@ import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
 import { isMessageValid, sanitizeText } from "./ChatInput.helper"
 import { useI18n } from "@solid-primitives/i18n"
+import playSound from "../../../helpers/playSound"
 
 export default function ChatInput() {
   const [t] = useI18n()
@@ -13,7 +14,9 @@ export default function ChatInput() {
   const charLimit = 70;
 
   createEffect(() => {
-    setUser('allowedToWrite', room.messages.length % room.playersLimit === playerTurn)
+    let isPlayerTurn = room.messages.length % room.playersLimit === playerTurn
+    setUser('allowedToWrite', isPlayerTurn)
+    playSound(isPlayerTurn)
   })
 
   const handleInput = (e) => {
