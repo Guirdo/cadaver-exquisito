@@ -1,41 +1,8 @@
 import { For, createEffect, createMemo } from "solid-js"
 import { room } from "../../../stores/room"
-import { user } from "../../../stores/user"
 import { useI18n } from "@solid-primitives/i18n"
-
-function MessageBox(props) {
-  const playerTurn = room.players.findIndex(p => p.id === user.id)
-  const isUserMessage = () => {
-    return props.index % room.players.length === playerTurn
-  }
-
-  return (
-    <div
-      class={
-        `[ ${isUserMessage() ? 'flex-row-reverse' : 'flex-row'} ]
-          [ gap-xs align-items-center ]`
-      }
-    >
-      <img
-        src="/icons/skull.webp"
-        width="40"
-        height="40"
-      />
-
-      <div
-        class={`
-          ${isUserMessage() ? 'bg-info color-white' : 'bg-secondary'}
-          flex-grow p-xs
-        `}
-      >
-        {props.index + 1 === room.messages.length && user.allowedToWrite ?
-          props.message :
-          '...'
-        }
-      </div>
-    </div>
-  )
-}
+import SoundButton from "./SoundButton"
+import MessageBox from "./MessageBox"
 
 export default function MessageList() {
   const [t] = useI18n()
@@ -48,9 +15,13 @@ export default function MessageList() {
 
   return (
     <div class="[ flex-column ] [ gap-xs flex-grow-2 ]">
-      <h3 class="pos-sticky inset-0 bg-white p-xs">
-        {t('chatRoom.roundXOfY', { current: currentRound(), total: room.rounds })}
-      </h3>
+      <div class="[ flex-row ] [ justify-content-between align-items-center pos-sticky inset-0 bg-white p-xs ]">
+        <h3>
+          {t('chatRoom.roundXOfY', { current: currentRound(), total: room.rounds })}
+        </h3>
+
+        <SoundButton />
+      </div>
       <For each={room.messages}>
         {(message, index) => {
           if ((index() + 1) % room.players.length === 0) {
