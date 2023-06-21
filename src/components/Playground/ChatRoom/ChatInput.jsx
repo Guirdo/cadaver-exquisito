@@ -16,7 +16,7 @@ export default function ChatInput() {
   createEffect(() => {
     let isPlayerTurn = room.messages.length % room.playersLimit === playerTurn
     setUser('allowedToWrite', isPlayerTurn)
-    playSound(isPlayerTurn)
+    user.allowSound && playSound(isPlayerTurn)
   })
 
   const handleInput = (e) => {
