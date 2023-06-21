@@ -17,3 +17,7 @@
   border: 1px solid var(--info-color);
   color: var(--info-color);
 }
+
+.button[data-type="info-outline"]:hover {
+  background-color: color-mix(in srgb, var(--info-color) 25%, white);
+}
