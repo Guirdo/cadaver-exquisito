@@ -13,7 +13,7 @@ export function isMessageValid(message) {
   if (isEmpty(message)) {
     setErrorMessage('invalidMessage')
     return false
-  } else if (contains(message, urlRegex)) {
+  } else if (contains(message)) {
     setErrorMessage('invalidMessage')
     return false
   }
