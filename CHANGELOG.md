@@ -1,5 +1,28 @@
 # Changelog
 
+<a name="1.2.0"></a>
+## 1.2.0 (2023-07-02)
+
+### Added
+
+- ✨ Add sound effects when receiving a message [[c713cb6](https://github.com/Guirdo/cadaver-exquisito/commit/c713cb6cd408866e4988804ab3f23fe11aede00b)]
+
+### Changed
+
+- 🚸 Allow playback of sound effects when allowed by the user [[0533e8b](https://github.com/Guirdo/cadaver-exquisito/commit/0533e8b43bd718b643e553b288973467a488928f)]
+- 🗃️ Add allowSound in user store [[e719e95](https://github.com/Guirdo/cadaver-exquisito/commit/e719e952bcf7b41974058d71b9aeab81d16a13df)]
+- 💄 Add info-outline button hover effect [[5eece8c](https://github.com/Guirdo/cadaver-exquisito/commit/5eece8cdf3dfe7b10e7eafb4f84a156fbfde9c55)]
+- 🍱 Add sound_on and sound_off icons [[b31cb2e](https://github.com/Guirdo/cadaver-exquisito/commit/b31cb2e24f57b6f14d300153543c07f2255a0aa3)]
+- 🧩 Update MessageList component [[ec99d4e](https://github.com/Guirdo/cadaver-exquisito/commit/ec99d4ec740899a8e8c3184eb181e2ae9e68b4cd)]
+- 🧩 Move MessageBox component to its own file [[c89cdfe](https://github.com/Guirdo/cadaver-exquisito/commit/c89cdfebafceb6d1de9a1676a7c14b95a9f5e9df)]
+- 🧩 Add SoundButton component [[d81bf35](https://github.com/Guirdo/cadaver-exquisito/commit/d81bf355ba69d8acdc9fe552f0e704ae289dfbfd)]
+
+### Miscellaneous
+
+-  Merge pull request [#2](https://github.com/Guirdo/cadaver-exquisito/issues/2) from Guirdo/add-sound-effects [[3d2e1da](https://github.com/Guirdo/cadaver-exquisito/commit/3d2e1da06f6b34bfac5d18d1059787397b3d156a)]
+- ⚰️ Remove unused argument [[1bcf2ed](https://github.com/Guirdo/cadaver-exquisito/commit/1bcf2edfb883533f09b20f72faf006812b548f95)]
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2023-06-14)
 
