@@ -9,9 +9,11 @@ import { room } from "./stores/room";
 import { locale } from "./stores/locale";
 import { lazy } from "solid-js";
 import { useI18n } from "@solid-primitives/i18n";
+import { ui } from "./stores/ui";
 
 const HomePage = lazy(() => import('./components/HomePage/HomePage'))
-const ErrorModal = lazy(() => import('./components/ErrorModal'))
+const ErrorModal = lazy(() => import('./components/Modal/ErrorModal'))
+const SettingsModal = lazy(() => import('./components/Modal/SettingsModal'))
 
 const playgroundRouteFilter = {
   id: (id) => isUUID(id,4)
@@ -48,6 +50,9 @@ export default function App() {
       </Show>
       <Show when={error.isDisplayed}>
         <ErrorModal />
+      </Show>
+      <Show when={ui.openSettings}>
+        <SettingsModal />
       </Show>
     </div>
   )

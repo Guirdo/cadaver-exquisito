@@ -28,7 +28,7 @@ export default function Navbar() {
       <button
         className="button border-none" 
         data-type="primary"
-        onClick={() => setUI('openSettings', v => true)
+        onClick={() => setUI('openSettings', true)
       }
       >
         <img src={settingsIcon} height={24} />
