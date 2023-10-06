@@ -52,6 +52,13 @@ const es = {
     spanish: 'Español',
     english: 'Inglés',
     madeBy: 'Hecho con ❤️ por' 
+  },
+  settings: {
+    title: 'Configuración',
+    muteSound: 'Silenciar sonido',
+    theme: 'Apariencia',
+    light: 'Claro',
+    dark: 'Oscuro',
   }
 }
 
