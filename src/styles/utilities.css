@@ -6,6 +6,10 @@
 .fs-xs {font-size: var(--fs-xs)}
 .fs-sm {font-size: var(--fs-sm)}
 
+@media screen and (max-width: 24rem) {
+  .xs-fs-lg {font-size: var(--fs-lg)}
+}
+
 .color-inherit { color: inherit }
 .color-white { color: white }
 .color-primary { color: var(--primary-color) }
@@ -55,3 +59,5 @@
 .inset-0 { inset: 0 }
 
 .list-style-none { list-style: none }
+
+.border-none {border:none;}
