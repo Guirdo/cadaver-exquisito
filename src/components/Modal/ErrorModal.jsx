@@ -7,11 +7,12 @@ export default function ErrorModal() {
 
   return (
     <Modal>
-      <p>
+      <h3 class="color-danger">Error</h3>
+      <p class="m-b-xs fs-sm">
         {t(`error.${error.code}`)}
       </p>
       <button
-        class="button"
+        class="button w-100"
         data-type="info"
         onClick={() => clearError()}
       >
