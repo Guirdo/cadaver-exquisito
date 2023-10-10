@@ -15,10 +15,12 @@
 .color-primary { color: var(--primary-color) }
 .color-success { color: var(--success-color) }
 .color-danger { color: var(--danger-color) }
+.color-theme  { color: var(--theme-color) }
 
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
 .p-md { padding: var(--s-md) }
+.p-lg { padding: var(--s-lg) }
 .p-block-sm { padding-block: var(--s-sm) }
 .p-block-md { padding-block: var(--s-md) }
 .p-inline-md { padding-inline: var(--s-md) }
@@ -53,7 +55,9 @@
 .bg-theme { background-color: var(--theme-bg) }
 
 .mblock-auto { margin-block: auto }
+.m-inline-lg { margin-inline: var(--s-lg) }
 .m-0 { margin: 0 }
+.m-b-xs { margin-bottom: var(--s-xs);}
 
 .pos-relative { position: relative }
 .pos-sticky { position: sticky } 
