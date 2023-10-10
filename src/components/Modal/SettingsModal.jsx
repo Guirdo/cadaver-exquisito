@@ -3,6 +3,37 @@ import { useI18n } from '@solid-primitives/i18n';
 import { setSettings, settings } from "../../stores/settings";
 import { setUI } from "../../stores/ui";
 
+function ChangeLangMenu() {
+  const [t, { locale }] = useI18n()
+
+  const handleChange = (e) => {
+    const lang = e.target.value
+    locale(lang)
+    setSettings('lang', lang)
+    document.documentElement.setAttribute("lang", lang);
+  }
+
+  return (
+    <>
+      <label>{t('footer.changeLang')}{' '}</label>
+      <select onChange={handleChange}>
+        <option
+          value="es"
+          selected={settings.lang === 'es'}
+        >
+          {t('footer.spanish')}
+        </option>
+        <option
+          value="en"
+          selected={settings.lang === 'en'}
+        >
+          {t('footer.english')}
+        </option>
+      </select>
+    </>
+  )
+}
+
 export default function SettingsModal() {
   const [t] = useI18n()
 
@@ -44,6 +75,8 @@ export default function SettingsModal() {
             </label>
           </div>
         </div>
+
+        <ChangeLangMenu />
       </form>
 
       <button
