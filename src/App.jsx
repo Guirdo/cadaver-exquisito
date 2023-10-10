@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import { error } from "./stores/error";
 import isUUID from 'validator/es/lib/isUUID'
 import { room } from "./stores/room";
-import { locale } from "./stores/locale";
 import { lazy } from "solid-js";
 import { useI18n } from "@solid-primitives/i18n";
 import { ui } from "./stores/ui";
@@ -23,7 +22,7 @@ const playgroundRouteFilter = {
 export default function App() {
   const [t] = useI18n()
   onMount(() => {
-    document.documentElement.setAttribute("lang", locale.lang)
+    document.documentElement.setAttribute("lang", settings.lang)
     document.documentElement.className = settings.theme
   })
 
