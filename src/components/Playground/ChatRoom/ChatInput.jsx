@@ -73,7 +73,7 @@ export default function ChatInput() {
             {t('chatRoom.send')}
           </button>
           <span
-            class={isDisabled() ? 'color-primary' : 'color-success'}
+            class={`${isDisabled() ? 'color-danger' : 'color-success'} fw-bold`}
           >
             {charCount()}/{charLimit}
           </span>

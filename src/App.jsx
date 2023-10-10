@@ -1,4 +1,4 @@
-import { Show, onMount } from "solid-js";
+import { Show, createEffect, onMount } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 import Navbar from "./components/Navbar";
 import Playground from "./components/Playground";
@@ -10,6 +10,7 @@ import { locale } from "./stores/locale";
 import { lazy } from "solid-js";
 import { useI18n } from "@solid-primitives/i18n";
 import { ui } from "./stores/ui";
+import { settings } from "./stores/settings";
 
 const HomePage = lazy(() => import('./components/HomePage/HomePage'))
 const ErrorModal = lazy(() => import('./components/Modal/ErrorModal'))
@@ -21,14 +22,19 @@ const playgroundRouteFilter = {
 
 export default function App() {
   const [t] = useI18n()
-  onMount(() => document.documentElement.setAttribute("lang", locale.lang))
+  onMount(() => {
+    document.documentElement.setAttribute("lang", locale.lang)
+    document.documentElement.className = settings.theme
+  })
+
+  createEffect(() => document.documentElement.className = settings.theme)
 
   return (
     <div class="[ flex-column ] [ min-hv-100 ]">
       <header>
         <Navbar />
       </header>
-      <main class="[ flex-column ] [ align-items-center flex-grow-2 ]">
+      <main class={`[ flex-column ] [ align-items-center flex-grow-2 ${settings.theme} ]`}>
         <Routes>
           <Route
             path="/"

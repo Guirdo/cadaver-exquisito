@@ -14,6 +14,7 @@
 .color-white { color: white }
 .color-primary { color: var(--primary-color) }
 .color-success { color: var(--success-color) }
+.color-danger { color: var(--danger-color) }
 
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
@@ -49,6 +50,7 @@
 .bg-secondary { background-color: var(--secondary-color) }
 .bg-info { background-color: var(--info-color) }
 .bg-white { background-color: white }
+.bg-theme { background-color: var(--theme-bg) }
 
 .mblock-auto { margin-block: auto }
 .m-0 { margin: 0 }

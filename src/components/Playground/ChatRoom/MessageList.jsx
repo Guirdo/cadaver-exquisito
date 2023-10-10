@@ -14,7 +14,7 @@ export default function MessageList() {
 
   return (
     <div class="[ flex-column ] [ gap-xs flex-grow-2 ]">
-      <div class="[ flex-row ] [ justify-content-between align-items-center pos-sticky inset-0 bg-white p-xs ]">
+      <div class="[ flex-row ] [ justify-content-between bg-theme align-items-center pos-sticky inset-0 p-xs ]">
         <h3>
           {t('chatRoom.roundXOfY', { current: currentRound(), total: room.rounds })}
         </h3>
