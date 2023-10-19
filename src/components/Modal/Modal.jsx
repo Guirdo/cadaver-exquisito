@@ -1,6 +1,6 @@
 import { Portal } from 'solid-js/web'
 
-export default function ErrorModal(props) {
+export default function Modal(props) {
   return (
     <Portal>
       <div class="[ flex-row modal ] [ w-100 h-100 justify-content-center align-items-center ]">
