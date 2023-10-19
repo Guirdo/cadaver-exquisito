@@ -14,8 +14,8 @@ function ChangeLangMenu() {
   }
 
   return (
-    <>
-      <label>{t('footer.changeLang')}{' '}</label>
+    <div class="flex-row gap-xs">
+      <label>{t('footer.changeLang')}</label>
       <select onChange={handleChange}>
         <option
           value="es"
@@ -30,7 +30,7 @@ function ChangeLangMenu() {
           {t('footer.english')}
         </option>
       </select>
-    </>
+    </div>
   )
 }
 
@@ -39,8 +39,8 @@ export default function SettingsModal() {
 
   return (
     <Modal>
-      <h3>{t('settings.title')}</h3>
-      <form>
+      <h3 class="m-b-xs">{t('settings.title')}</h3>
+      <form class="flex-column gap-xxs fs-sm m-b-xs ">
         <label>
           {t('settings.muteSound')}{' '}
           <input
@@ -80,7 +80,7 @@ export default function SettingsModal() {
       </form>
 
       <button
-        className="button"
+        class="button w-100"
         data-type="success"
         onClick={() => setUI('openSettings', false)}
       >
