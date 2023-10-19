@@ -13,10 +13,12 @@
 .color-inherit { color: inherit }
 .color-white { color: white }
 .color-primary { color: var(--primary-color) }
+.color-secondary { color: var(--secondary-color) }
 .color-success { color: var(--success-color) }
 .color-danger { color: var(--danger-color) }
 .color-theme  { color: var(--theme-color) }
 
+.p-xxs { padding: var(--s-xxs) }
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
 .p-md { padding: var(--s-md) }
