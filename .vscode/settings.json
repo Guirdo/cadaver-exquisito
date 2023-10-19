@@ -1,0 +1,10 @@
+{
+  "editor.wordWrap": "on",
+  "gitmoji.addCustomEmoji": [
+    {
+      "emoji": "🧩",
+      "code": ":jigsaw:",
+      "description": "Add or update UI component"
+    },
+  ]
+}
