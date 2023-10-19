@@ -25,7 +25,9 @@ const es = {
     yourTurn: 'Tu turno'
   },
   result: {
-    writtenBy: 'Escrito por:'
+    writtenBy: 'Escrito por:',
+    saveAsImage: 'Guardar como imagen',
+    share: 'Compartir'
   },
   error:{
     copyFails: 'Perdón, no funciona en tu navegador',

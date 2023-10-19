@@ -25,7 +25,9 @@ const en = {
     yourTurn: 'Your turn'
   },
   result: {
-    writtenBy: 'Written by:'
+    writtenBy: 'Written by:',
+    saveAsImage: 'Save as image',
+    share: 'Share'
   },
   error: {
     copyFails: "Sorry, it doesn't work in your browser",
