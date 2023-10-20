@@ -38,7 +38,8 @@ const es = {
     playersLimitReached: 'Lo siento, la sala ya esta llena',
     lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres',
     gameInProgress: 'Este juego esta en progreso, ya no puedes unirte',
-    pageNotFound: 'Esta página no existe'
+    pageNotFound: 'Esta página no existe',
+    returnHome: 'Regresa al Inicio'
   },
   links: {
     donate: 'Invítame un café ☕',
