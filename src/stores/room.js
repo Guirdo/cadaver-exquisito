@@ -1,6 +1,8 @@
 import { createStore, unwrap } from 'solid-js/store'
 import { supabase } from '../supabase'
 
+const rooms_table = import.meta.env.VITE_ROOMS_TABLE
+
 const initialState = {
   id: '',
   status: 0,
@@ -19,7 +21,7 @@ export function clearRoom() {
 export async function createRoom(user) {
   try {
     const { data } = await supabase
-      .from('rooms')
+      .from(rooms_table)
       .insert({ players: [{ id: user.id, nickname: user.nickname, isOwner: true }] })
       .select()
 
@@ -32,7 +34,7 @@ export async function createRoom(user) {
 export async function fetchRoom(id) {
   try {
     const { data, error } = await supabase
-      .from('rooms')
+      .from(rooms_table)
       .select('id, status, rounds, playersLimit, players, messages')
       .eq('id', id)
 
@@ -55,7 +57,7 @@ export async function subscribeToRoomChanges() {
       {
         event: 'UPDATE',
         schema: 'public',
-        table: 'rooms',
+        table: rooms_table,
         filter: `id=eq.${room.id}`
       },
       (payload) => {
@@ -74,7 +76,7 @@ export async function joinGuest(id, nickname) {
       const players = unwrap(room.players).map(e => ({ id: e.id, nickname: e.nickname, isOwner: e.isOwner }))
 
       await supabase
-        .from('rooms')
+        .from(rooms_table)
         .update({ players: [...players, { id, nickname, isOwner: false }] })
         .eq('id', room.id)
     } else {
@@ -88,7 +90,7 @@ export async function joinGuest(id, nickname) {
 export async function updateRoom(column, value) {
   try {
     await supabase
-      .from('rooms')
+      .from(rooms_table)
       .update({ [column]: value })
       .eq('id', room.id)
   } catch (error) {
@@ -99,7 +101,7 @@ export async function updateRoom(column, value) {
 export async function startGame() {
   try {
     await supabase
-        .from('rooms')
+        .from(rooms_table)
         .update({
           playersLimit: room.players.length,
           status: 1
@@ -115,7 +117,7 @@ export async function sendMessage(message) {
     const messages = unwrap(room.messages).map(e => e)
 
     await supabase
-      .from('rooms')
+      .from(rooms_table)
       .update({ messages: [...messages, message] })
       .eq('id', room.id)
 
@@ -129,7 +131,7 @@ export async function finishGame() {
     const cleanPlayersList = room.players.map(p => p.nickname)
 
     const { error } = await supabase
-        .from('rooms')
+        .from(rooms_table)
         .update({
           status: 2,
           players: cleanPlayersList

@@ -23,7 +23,7 @@ export default function MessageBox(props) {
       <div
         class={`
           ${isUserMessage() ? 'bg-info color-white' : 'bg-secondary'}
-          flex-grow p-xs
+          flex-grow p-xs no-theme-color
         `}
       >
         {props.index + 1 === room.messages.length && user.allowedToWrite ?

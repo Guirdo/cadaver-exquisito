@@ -6,14 +6,23 @@
 .fs-xs {font-size: var(--fs-xs)}
 .fs-sm {font-size: var(--fs-sm)}
 
+@media screen and (max-width: 24rem) {
+  .xs-fs-lg {font-size: var(--fs-lg)}
+}
+
 .color-inherit { color: inherit }
 .color-white { color: white }
 .color-primary { color: var(--primary-color) }
+.color-secondary { color: var(--secondary-color) }
 .color-success { color: var(--success-color) }
+.color-danger { color: var(--danger-color) }
+.color-theme  { color: var(--theme-color) }
 
+.p-xxs { padding: var(--s-xxs) }
 .p-xs { padding: var(--s-xs) }
 .p-sm { padding: var(--s-sm) }
 .p-md { padding: var(--s-md) }
+.p-lg { padding: var(--s-lg) }
 .p-block-sm { padding-block: var(--s-sm) }
 .p-block-md { padding-block: var(--s-md) }
 .p-inline-md { padding-inline: var(--s-md) }
@@ -45,9 +54,12 @@
 .bg-secondary { background-color: var(--secondary-color) }
 .bg-info { background-color: var(--info-color) }
 .bg-white { background-color: white }
+.bg-theme { background-color: var(--theme-bg) }
 
 .mblock-auto { margin-block: auto }
+.m-inline-lg { margin-inline: var(--s-lg) }
 .m-0 { margin: 0 }
+.m-b-xs { margin-bottom: var(--s-xs);}
 
 .pos-relative { position: relative }
 .pos-sticky { position: sticky } 
@@ -55,3 +67,5 @@
 .inset-0 { inset: 0 }
 
 .list-style-none { list-style: none }
+
+.border-none {border:none;}

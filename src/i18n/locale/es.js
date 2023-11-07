@@ -25,7 +25,9 @@ const es = {
     yourTurn: 'Tu turno'
   },
   result: {
-    writtenBy: 'Escrito por:'
+    writtenBy: 'Escrito por:',
+    saveAsImage: 'Guardar como imagen',
+    share: 'Compartir'
   },
   error:{
     copyFails: 'Perdón, no funciona en tu navegador',
@@ -36,7 +38,8 @@ const es = {
     playersLimitReached: 'Lo siento, la sala ya esta llena',
     lengthNickname: 'Tu apodo debe tener de 2 a 20 caracteres',
     gameInProgress: 'Este juego esta en progreso, ya no puedes unirte',
-    pageNotFound: 'Esta página no existe'
+    pageNotFound: 'Esta página no existe',
+    returnHome: 'Regresa al Inicio'
   },
   links: {
     donate: 'Invítame un café ☕',
@@ -52,6 +55,13 @@ const es = {
     spanish: 'Español',
     english: 'Inglés',
     madeBy: 'Hecho con ❤️ por' 
+  },
+  settings: {
+    title: 'Configuración',
+    muteSound: 'Silenciar sonido',
+    theme: 'Apariencia',
+    light: 'Claro',
+    dark: 'Oscuro',
   }
 }
 

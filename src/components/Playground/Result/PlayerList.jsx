@@ -9,10 +9,10 @@ export default function PlayerList(props) {
         <For each={props.players}>
           {
             (player) => (
-              <div class="[ flex-column ] [ align-items-center ]">
+              <div class="[ flex-column ] [ align-items-center gap-xxs ]">
                 <img
                   src="/icons/skull.webp"
-                  width="48"
+                  width="44"
                 />
 
                 <small class="fw-bold">{player}</small>

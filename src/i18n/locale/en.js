@@ -25,7 +25,9 @@ const en = {
     yourTurn: 'Your turn'
   },
   result: {
-    writtenBy: 'Written by:'
+    writtenBy: 'Written by:',
+    saveAsImage: 'Save as image',
+    share: 'Share'
   },
   error: {
     copyFails: "Sorry, it doesn't work in your browser",
@@ -36,7 +38,8 @@ const en = {
     playersLimitReached: 'Sorry, the room has reached its players limit',
     lengthNickname: 'Your nickname should have between 2 or 20 characters',
     gameInProgress: 'This game is in progress, you can not join it',
-    pageNotFound: "This page does not exist"
+    pageNotFound: "This page does not exist",
+    returnHome: 'Return Home'
   },
   links: {
     donate: 'Buy me a coffee ☕',
@@ -52,6 +55,13 @@ const en = {
     spanish: 'Spanish',
     english: 'English',
     madeBy: 'Made with ❤️ by' 
+  },
+  settings: {
+    title: 'Settings',
+    muteSound: 'Mute sound',
+    theme: 'Theme',
+    light: 'Light',
+    dark: 'Dark'
   }
 }
 

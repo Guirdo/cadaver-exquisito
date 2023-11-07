@@ -3,6 +3,7 @@ import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
 import { isMessageValid, sanitizeText } from "./ChatInput.helper"
 import { useI18n } from "@solid-primitives/i18n"
+import { settings } from "../../../stores/settings"
 import playSound from "../../../helpers/playSound"
 
 export default function ChatInput() {
@@ -16,7 +17,7 @@ export default function ChatInput() {
   createEffect(() => {
     let isPlayerTurn = room.messages.length % room.playersLimit === playerTurn
     setUser('allowedToWrite', isPlayerTurn)
-    user.allowSound && playSound(isPlayerTurn)
+    !settings.muteSound && playSound(isPlayerTurn)
   })
 
   const handleInput = (e) => {
@@ -72,7 +73,7 @@ export default function ChatInput() {
             {t('chatRoom.send')}
           </button>
           <span
-            class={isDisabled() ? 'color-primary' : 'color-success'}
+            class={`${isDisabled() ? 'color-danger' : 'color-success'} fw-bold`}
           >
             {charCount()}/{charLimit}
           </span>

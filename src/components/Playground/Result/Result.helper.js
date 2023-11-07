@@ -1,9 +1,10 @@
 import { supabase } from "../../../supabase"
+const rooms_table = import.meta.env.VITE_ROOMS_TABLE
 
 export async function fetchResult(id) {
   try {
     const { data, error } = await supabase
-      .from('rooms')
+      .from(rooms_table)
       .select('players, messages')
       .eq('id', id)
 

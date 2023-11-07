@@ -23,4 +23,20 @@
   --secondary-color: #A7AE9C;
   --success-color: #5b913f;
   --info-color: #468080;
+  --danger-color: #EE2E31;
+  --dark-color: #07090F;
+}
+
+:root.light{
+  --theme-bg: white;
+  --theme-color: var(--dark-color);
+}
+
+:root.dark {
+  --theme-bg: var(--dark-color);
+  --theme-color: white;
+}
+
+:root.dark .no-theme-color {
+  color: var(--dark-color)
 }

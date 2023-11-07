@@ -1,7 +1,6 @@
 import { For, createEffect, createMemo } from "solid-js"
 import { room } from "../../../stores/room"
 import { useI18n } from "@solid-primitives/i18n"
-import SoundButton from "./SoundButton"
 import MessageBox from "./MessageBox"
 
 export default function MessageList() {
@@ -15,12 +14,10 @@ export default function MessageList() {
 
   return (
     <div class="[ flex-column ] [ gap-xs flex-grow-2 ]">
-      <div class="[ flex-row ] [ justify-content-between align-items-center pos-sticky inset-0 bg-white p-xs ]">
+      <div class="[ flex-row ] [ justify-content-between bg-theme align-items-center pos-sticky inset-0 p-xs ]">
         <h3>
           {t('chatRoom.roundXOfY', { current: currentRound(), total: room.rounds })}
         </h3>
-
-        <SoundButton />
       </div>
       <For each={room.messages}>
         {(message, index) => {
