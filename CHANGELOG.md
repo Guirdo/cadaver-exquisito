@@ -1,5 +1,59 @@
 # Changelog
 
+<a name="1.3.0"></a>
+## 1.3.0 (2023-11-07)
+
+### Added
+
+- ✨ Save result as a image and share as a link [[ac73f74](https://github.com/Guirdo/cadaver-exquisito/commit/ac73f74563d76d80dbb342c05b206260023b844a)]
+- 💄 Add dark and light themes [[78c61a1](https://github.com/Guirdo/cadaver-exquisito/commit/78c61a1c08db1e9c9ea6c260ae117f47b1782557)]
+- ➕ Add downloadjs dependency [[5bcf3b9](https://github.com/Guirdo/cadaver-exquisito/commit/5bcf3b9ccbf1136c46ad1ed9a12ded523a0e6af3)]
+- ➕ Add html-to-image dependency [[7794b85](https://github.com/Guirdo/cadaver-exquisito/commit/7794b85d55712bb4e4996ae7792094431bfb9654)]
+
+### Changed
+
+- 🔧 Add VITE_ROOMS_TABLE variable to the .env.example file [[5c90593](https://github.com/Guirdo/cadaver-exquisito/commit/5c90593763d7c47462cbb4acaa8ab1a522406359)]
+- ♻️ Add Router file [[b01ac77](https://github.com/Guirdo/cadaver-exquisito/commit/b01ac7746e61cd84642f8e3144baad303e369256)]
+- 💄 Add new utilities styles [[64be5d0](https://github.com/Guirdo/cadaver-exquisito/commit/64be5d06b6f54e1a45062e7e1bb439834ea8a96d)]
+- 💄 Update ErrorModal styles [[0c14c13](https://github.com/Guirdo/cadaver-exquisito/commit/0c14c1333951fe3a408a539db3ac4fee9f8552ba)]
+- 💄 Update Modal styles [[38c0529](https://github.com/Guirdo/cadaver-exquisito/commit/38c052927166c3050918a5b3ceec755a242a8236)]
+- 🗃️ Move lang option to settings store [[099bdce](https://github.com/Guirdo/cadaver-exquisito/commit/099bdceec4ac9c5a0f4a57017b036d89d2562978)]
+- 🗃️ Use muteSound from settings store for playing sound [[46042dd](https://github.com/Guirdo/cadaver-exquisito/commit/46042dd07d271e4cacd63971f76d4df025babdfe)]
+- 🗃️ Use environment variable for the rooms table [[fbb7b92](https://github.com/Guirdo/cadaver-exquisito/commit/fbb7b92213300774102f57797c0897bda5a70d0a)]
+- 🗃️ Add settings store [[d92e67e](https://github.com/Guirdo/cadaver-exquisito/commit/d92e67ef577e2dd2f0586906dfed69cbe1a27408)]
+- 🗃️ Add UI store [[408b74f](https://github.com/Guirdo/cadaver-exquisito/commit/408b74fe6525fb712d428456e5a8530f6feee4c4)]
+- 💄 Add primary type for buttons [[80647f2](https://github.com/Guirdo/cadaver-exquisito/commit/80647f2ccce84135ecd5ebee195e84c8261827bb)]
+- 💄 Add a breakpoint for fs-md and border-none [[3a11c75](https://github.com/Guirdo/cadaver-exquisito/commit/3a11c75e90cfc5b4a436d36d26abac4cb3bb0213)]
+- 🍱 Add settings icon [[36a84f3](https://github.com/Guirdo/cadaver-exquisito/commit/36a84f3b0b87383230dabfe25cb760a9e90ee6fb)]
+- 🔧 Add example of environment variables [[9a217dd](https://github.com/Guirdo/cadaver-exquisito/commit/9a217dd24ea2f4b072883b1107d11138afa58d09)]
+
+### Removed
+
+- 🔥 Remove locale store [[daa4a32](https://github.com/Guirdo/cadaver-exquisito/commit/daa4a323f593feb96a06cf22205ece9d7c3432da)]
+- 🔥 Remove SoundButton [[eb0158e](https://github.com/Guirdo/cadaver-exquisito/commit/eb0158e209b34999f61f2496673875f181d027bf)]
+- 🔥 Remove ErrorModal folder [[2a5e27d](https://github.com/Guirdo/cadaver-exquisito/commit/2a5e27d6d884f223da93ef8429f2023b316751cc)]
+
+### Fixed
+
+- ✏️ Fix typo in Modal function name [[33c55b7](https://github.com/Guirdo/cadaver-exquisito/commit/33c55b7cd096445b6a63d645468e806c2e7cbe71)]
+
+### Miscellaneous
+
+-  Merge pull request [#3](https://github.com/Guirdo/cadaver-exquisito/issues/3) from Guirdo/development [[07f9a22](https://github.com/Guirdo/cadaver-exquisito/commit/07f9a22c21808cc006bd223f186053eddcc10656)]
+- 🧩 Add NotFoundPage component [[cf8b1f3](https://github.com/Guirdo/cadaver-exquisito/commit/cf8b1f30d721f37f01008cf13e0f4bbb60c83b3d)]
+- 🌐 Add returnHome translations [[51b0f02](https://github.com/Guirdo/cadaver-exquisito/commit/51b0f02830f51b13a111112582ef5e06be257cf0)]
+- 🧑‍💻 Add recomended extensions file for vscode [[2fb965e](https://github.com/Guirdo/cadaver-exquisito/commit/2fb965e3e4ca7efe43418eef7d4720c386207ca6)]
+- 🌐 Add more Result translations [[8ea456b](https://github.com/Guirdo/cadaver-exquisito/commit/8ea456bc94778cb19cd48c85aa188e8b7f953fd7)]
+- 🧩 Add Preview component [[d771e0a](https://github.com/Guirdo/cadaver-exquisito/commit/d771e0a2771b42070d93f5fb706782e311fad000)]
+- 🙈 Don&#x27;t ignore workspace settings file anymore [[361f828](https://github.com/Guirdo/cadaver-exquisito/commit/361f8287f46f4249dff58c139dcac42f6405912b)]
+- 🩹 Fix some style inconsistencies [[9bb4ca2](https://github.com/Guirdo/cadaver-exquisito/commit/9bb4ca22de8daf47d3b87c6f589426a04300c041)]
+- 🧩 Move ChangeLangMenu into SettngsModal [[e5be4c2](https://github.com/Guirdo/cadaver-exquisito/commit/e5be4c2dd69d7bca221311b9fec026f66c2d0731)]
+- 🧩 Add SettingsModal component [[e643b0a](https://github.com/Guirdo/cadaver-exquisito/commit/e643b0a41f54631fb009e2063bc5d08b720b9ca7)]
+- 🌐 Add translations for settings [[1842785](https://github.com/Guirdo/cadaver-exquisito/commit/1842785fec13865e19107f83061ed9349bc3e376)]
+- 🧩 Add button for opening the settings modal [[e1754f0](https://github.com/Guirdo/cadaver-exquisito/commit/e1754f084459ea4e6945444bc8f303cdd72d0cc8)]
+- 🧩 Add Modal component [[ea23d5b](https://github.com/Guirdo/cadaver-exquisito/commit/ea23d5bbfcc47ffc594e9403cf478dd85aa065ff)]
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2023-07-02)
 
