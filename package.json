@@ -17,6 +17,7 @@
     "@solid-primitives/i18n": "^2.0.1",
     "@solidjs/router": "^0.10.10",
     "@supabase/supabase-js": "^2.39.3",
+    "crypto-randomuuid": "^1.0.0",
     "dompurify": "^3.0.8",
     "downloadjs": "^1.4.7",
     "html-to-image": "^1.11.11",
