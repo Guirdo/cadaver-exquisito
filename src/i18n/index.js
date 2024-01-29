@@ -1,4 +1,4 @@
-import { flatten, translator } from "@solid-primitives/i18n";
+import { flatten, translator, resolveTemplate } from "@solid-primitives/i18n";
 import es from './locale/es'
 import en from './locale/en'
 import { settings } from "../stores/settings";
@@ -10,4 +10,4 @@ const dictionaries = {
 
 const dict = createMemo(() => flatten(dictionaries[settings.lang]))
 
-export const t = translator(dict)
+export const t = translator(dict, resolveTemplate)
