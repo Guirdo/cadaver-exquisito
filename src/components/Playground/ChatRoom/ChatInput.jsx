@@ -2,12 +2,11 @@ import { createEffect, createSignal } from "solid-js"
 import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
 import { isMessageValid, sanitizeText } from "./ChatInput.helper"
-import { useI18n } from "@solid-primitives/i18n"
 import { settings } from "../../../stores/settings"
 import playSound from "../../../helpers/playSound"
+import { t } from '../../../i18n'
 
 export default function ChatInput() {
-  const [t] = useI18n()
   const [message, setMessage] = createSignal('')
   const [charCount, setCharCount] = createSignal(0)
   const [enable, setEnable] = createSignal(false)

@@ -1,7 +1,6 @@
-import { useI18n } from "@solid-primitives/i18n"
+import { t } from '../i18n'
 
 function ImportantLinks() {
-  const [t] = useI18n()
   return (
     <ul class="[ flex-row ] [ m-0 list-style-none flex-wrap ]">
       <li>
@@ -18,8 +17,6 @@ function ImportantLinks() {
 }
 
 export default function Footer() {
-  const [t] = useI18n()
-
   return (
     <footer class="[ flex-row ] [ flex-wrap fs-xs gap-xs w-100 justify-content-evenly p-xs ]">
       <ImportantLinks />
