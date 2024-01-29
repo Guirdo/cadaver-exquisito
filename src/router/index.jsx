@@ -1,31 +1,37 @@
 import { lazy } from "solid-js"
-import { Route, Routes } from "@solidjs/router"
+import { Route } from "@solidjs/router"
 import isUUID from 'validator/es/lib/isUUID'
 import Playground from "../components/Playground"
 
 const HomePage = lazy(() => import('../components/HomePage'))
 const NotFoundPage = lazy(() => import('../components/NotFoundPage'))
+const PublicRoomPage = lazy(() => import('../components/PublicRoomPage'))
 
 const playgroundRouteFilter = {
   id: (id) => isUUID(id,4)
 }
 
-export default function Router() {
+export default function AppRouter() {
   return (
-    <Routes>
+    <>
       <Route
         path="/"
-        element={HomePage}
+        component={HomePage}
       />
       <Route
         path="/:id"
-        element={Playground}
+        component={Playground}
         matchFilters={playgroundRouteFilter}
       />
       <Route
-        path="*"
-        element={NotFoundPage}
+        path="/p/:id"
+        component={PublicRoomPage}
+        matchFilters={playgroundRouteFilter}
       />
-    </Routes>
+      <Route
+        path="*404"
+        component={NotFoundPage}
+      />
+    </>
   )
 }
