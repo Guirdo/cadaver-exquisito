@@ -1,10 +1,9 @@
-import { useI18n } from "@solid-primitives/i18n";
 import { setErrorMessage } from "../../../stores/error";
 import { createSignal } from "solid-js";
+import { t } from '../../../i18n'
 
 export default function InvitationLink() {
   const [isWaiting, setIsWaiting] = createSignal(false)
-  const [t] = useI18n()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location)

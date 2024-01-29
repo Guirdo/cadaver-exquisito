@@ -1,11 +1,9 @@
 import { For, createEffect, createMemo } from "solid-js"
 import { room } from "../../../stores/room"
-import { useI18n } from "@solid-primitives/i18n"
+import { t } from '../../../i18n'
 import MessageBox from "./MessageBox"
 
 export default function MessageList() {
-  const [t] = useI18n()
-
   const currentRound = createMemo(() => {
     return Math.floor(room.messages.length / room.players.length) + 1
   })

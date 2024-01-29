@@ -1,8 +1,6 @@
-import { useI18n } from "@solid-primitives/i18n"
+import { t } from '../../i18n'
 
 export default function InfoSection() {
-  const [t] = useI18n()
-
   return (
     <div class="[ flex-row ] [ flex-wrap fs-sm ]">
       <details class="w-28ch">
