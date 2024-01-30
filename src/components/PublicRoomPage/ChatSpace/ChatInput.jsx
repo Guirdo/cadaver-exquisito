@@ -3,10 +3,10 @@ import { setUser, user } from "../../../stores/user";
 import { publicRoom, sendMessage } from "../../../stores/public_room";
 import { createEffect } from "solid-js";
 import { settings } from "../../../stores/settings";
-import { isMessageValid, sanitizeText } from "../../Playground/ChatRoom/ChatInput.helper";
 import playSound from "../../../helpers/playSound";
 import { t } from '../../../i18n'
 import InvitationLink from "./InvitationLink";
+import { isMessageValid, sanitizeText } from "../../../helpers/sanitizeText";
 
 export function ChatInput() {
   const [message, setMessage] = createSignal('')

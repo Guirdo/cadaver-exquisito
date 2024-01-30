@@ -1,10 +1,10 @@
 import { createEffect, createSignal } from "solid-js"
 import { room, sendMessage } from "../../../stores/room"
 import { user, setUser } from "../../../stores/user"
-import { isMessageValid, sanitizeText } from "./ChatInput.helper"
 import { settings } from "../../../stores/settings"
 import playSound from "../../../helpers/playSound"
 import { t } from '../../../i18n'
+import { isMessageValid, sanitizeText } from "../../../helpers/sanitizeText"
 
 export default function ChatInput() {
   const [message, setMessage] = createSignal('')
