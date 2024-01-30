@@ -2,26 +2,38 @@ import { useNavigate } from "@solidjs/router"
 import { user, setUser } from "../../stores/user"
 import isNicknameValid from "../../helpers/isNicknameValid"
 import { onMount } from "solid-js"
-import { useI18n } from "@solid-primitives/i18n"
 import { clearRoom, createRoom } from "../../stores/room"
+import { findPublicRoom } from "../../stores/public_room"
 import InfoSection from "./InfoSection"
+import { t } from '../../i18n'
 
 export default function HomePage() {
   const navigate = useNavigate()
-  const [ t ] = useI18n()
 
   onMount(() =>{
     setUser('isOwner', false)
     clearRoom()
   })
 
+  const ASSIGNING_USER = {
+    createRoom: async () => {
+      const roomId = await createRoom(user)
+      setUser('isOwner', true)
+      navigate(`/${roomId}`)
+    },
+    joinPublicRoom: async() => {
+      const publicRoomId = await findPublicRoom()
+      navigate(`/p/${publicRoomId}`)
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (isNicknameValid()) {
-      const roomId = await createRoom(user)
-      setUser('isOwner', true)
-      navigate(`/${roomId}`)
+      let submitter = e.submitter.value
+
+      ASSIGNING_USER[submitter]()
     }
   }
 
@@ -52,8 +64,18 @@ export default function HomePage() {
           class="button"
           data-type="success"
           type="submit"
+          value="createRoom"
         >
           {t('homePage.createRoom')}
+        </button>
+
+        <button
+          class="button"
+          data-type="info"
+          type="submit"
+          value="joinPublicRoom"
+        >
+          {t('homePage.joinPublicRoom')}
         </button>
       </form>
 
