@@ -1,8 +1,9 @@
 import { createStore, unwrap } from 'solid-js/store'
 import { supabase } from '../supabase'
 
-const public_rooms_table = import.meta.env.VITE_PUBLIC_ROOMS_TABLE
-const PUBLIC_ROOMS_LIMIT = 14
+const PUBLIC_ROOMS_TABLE = import.meta.env.VITE_PUBLIC_ROOMS_TABLE
+const PUBLIC_ROOMS_MESSAGE_LIMIT = 12
+const PUBLIC_ROOMS_EXPIRATION_INVERTAL = 1
 
 const initialState = {
   id: '',
@@ -18,10 +19,10 @@ export const [publicRoom, setPublicRoom] = createStore(initialState)
 async function createPublicRoom() {
   try {
     const currentdDate = new Date()
-    const expiratesAt = new Date(currentdDate.setDate(currentdDate.getDate() + 7))
+    const expiratesAt = new Date(currentdDate.setDate(currentdDate.getDate() + PUBLIC_ROOMS_EXPIRATION_INVERTAL))
 
     const { data, error } = await supabase
-      .from(public_rooms_table)
+      .from(PUBLIC_ROOMS_TABLE)
       .insert({
         expirates_at: expiratesAt,
         players: [],
@@ -40,7 +41,7 @@ async function createPublicRoom() {
 export async function fetchPublicRoom(id) {
   try {
     const { data, error } = await supabase
-      .from(public_rooms_table)
+      .from(PUBLIC_ROOMS_TABLE)
       .select('id, finished, players, messages,expirates_at')
       .eq('id', id)
 
@@ -65,7 +66,7 @@ async function subscribeToPublicRoomChanges() {
         {
           event: 'UPDATE',
           schema: 'public',
-          table: public_rooms_table,
+          table: PUBLIC_ROOMS_TABLE,
           filter: `id=eq.${publicRoom.id}`
         },
         (payload) => {
@@ -86,7 +87,7 @@ export async function sendMessage(id, message, nickname) {
   try {
     let players = unwrap(publicRoom.players).map(e => ({ id: e.id, nickname: e.nickname }))
     let messages = unwrap(publicRoom.messages).map(e => e)
-    const finished = messages.length === PUBLIC_ROOMS_LIMIT
+    const finished = messages.length === PUBLIC_ROOMS_MESSAGE_LIMIT
     
     messages.push({ userId: id, message })
     nickname && players.push({ id, nickname })
@@ -97,7 +98,7 @@ export async function sendMessage(id, message, nickname) {
     }
 
     await supabase
-      .from(public_rooms_table)
+      .from(PUBLIC_ROOMS_TABLE)
       .update({
         players,
         messages,
@@ -111,7 +112,7 @@ export async function sendMessage(id, message, nickname) {
 
 export async function findPublicRoom() {
   const { data } = await supabase
-    .from(public_rooms_table)
+    .from(PUBLIC_ROOMS_TABLE)
     .select('id')
     .eq('finished', false)
 
@@ -123,7 +124,7 @@ export async function findPublicRoom() {
 export async function getRandomPublicRoom(){
   try{
     const { data } = await supabase
-      .from('random_'+public_rooms_table)
+      .from('random_'+PUBLIC_ROOMS_TABLE)
       .select('id')
       .limit(1)
       .single()
@@ -137,7 +138,7 @@ export async function getRandomPublicRoom(){
 export async function getMostRecentPublicRooms() {
   try{
     const { data } = await supabase
-      .from('most_recent_'+public_rooms_table)
+      .from('most_recent_'+PUBLIC_ROOMS_TABLE)
       .select('*')
 
       return data
