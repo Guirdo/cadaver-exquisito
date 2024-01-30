@@ -1,9 +1,9 @@
 :root {
-  --scale:1.15;
+  --scale:1.1;
 
   --font: 'Aleo';
 
-  --fs-md: clamp(1rem,1rem + 0.5vi, 1.4rem);
+  --fs-md: clamp(1rem,1rem + 0.4vi, 1.4rem);
   --fs-sm: calc(var(--fs-md) / var(--scale));
   --fs-xs: calc(var(--fs-sm) / var(--scale));
   --fs-lg: calc(var(--fs-md) * var(--scale));
