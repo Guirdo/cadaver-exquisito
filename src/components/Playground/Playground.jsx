@@ -1,6 +1,6 @@
 import { Match, Switch } from "solid-js";
 import { useParams } from "@solidjs/router";
-import { room, fetchRoom, subscribeToRoomChanges } from "../../stores/room";
+import { room, fetchRoom } from "../../stores/room";
 import { lazy } from 'solid-js'
 
 const WaitingRoom = lazy(() => import('./WaitingRoom/WaitingRoom'))
@@ -32,10 +32,6 @@ function StatusSwitcher() {
 export default function Playground() {
   const params = useParams()
   fetchRoom(params.id)
-
-  if(room.status !== 2){
-    subscribeToRoomChanges()
-  }
 
   return (
     <div class="[ playground ] [ flex-column ] [ flex-grow gap-lg p-sm align-items-center ]">
