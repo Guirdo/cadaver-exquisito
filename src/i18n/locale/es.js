@@ -45,7 +45,7 @@ const es = {
     donate: 'Invítame un café ☕',
   },
   homePage: {
-    createRoom: 'Crear sala',
+    createRoom: 'Crear sala privada',
     joinPublicRoom: 'Unirse a sala pública',
     about: 'Acerca de',
     description1: '💀Cadáver Exquisito🍷es un juego de palabras, creado por artistas surrealistas del siglo XX, donde tus amigos y tú escriben juntos un poema o historia, pero solo podrás ver lo que la persona anterior escribió.',
@@ -55,7 +55,10 @@ const es = {
     waitForYourTurn: 'Espera tu turno',
     inviteSomeoneElse: 'Invita a alguien más',
     copyInvitationLink: 'Copiar enlace de invitación',
-    beTheFirstOne: 'Inicia una nueva historia'
+    beTheFirstOne: 'Inicia una nueva historia',
+    seeWhatOthersWrote: 'Ve lo que otros han escrito',
+    randomCadaver: 'Cadaver aleatorio',
+    threeMostRecent: 'Los tres más recientes'
   },
   footer: {
     changeLang: 'Cambiar idioma:',
