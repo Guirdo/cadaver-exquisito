@@ -1,17 +1,16 @@
 import { createSignal } from "solid-js";
 import { useParams } from "@solidjs/router";
 import { Show, createResource, lazy } from "solid-js";
-import { useI18n } from "@solid-primitives/i18n";
+import { t } from '../../../i18n'
 import { fetchResult } from "./Result.helper";
 import { toPng } from "html-to-image";
 import download from "downloadjs";
-import Preview from "./Preview";
+import Preview from "../../Common/Preview";
 
-const PlayerList = lazy(() => import('./PlayerList'))
-const MessageList = lazy(() => import('./MessageList'))
+const PlayerList = lazy(() => import('../../Common/PlayerList'))
+const MessageList = lazy(() => import('../../Common/MessageList'))
 
 export default function Result() {
-  const [t] = useI18n()
   const [isWaiting, setIsWaiting] = createSignal(false)
   const params = useParams()
   const [room] = createResource(params.id, fetchResult)
