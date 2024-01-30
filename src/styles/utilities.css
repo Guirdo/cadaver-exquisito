@@ -24,10 +24,15 @@
 .p-md { padding: var(--s-md) }
 .p-lg { padding: var(--s-lg) }
 .p-block-sm { padding-block: var(--s-sm) }
+.p-block-e-xs { padding-block-end: var(--s-xs) }
+.p-block-s-sm { padding-block-start: var(--s-sm) }
+.p-block-s-xs { padding-block-start: var(--s-xs) }
+.p-block-e-xxs { padding-block-end: var(--s-xxs) }
 .p-block-md { padding-block: var(--s-md) }
 .p-inline-md { padding-inline: var(--s-md) }
 
 .w-2rem { width: 2rem }
+.w-4rem { width: 4rem }
 .w-6rem { width: 6rem }
 .w-100 { width: 100% }
 .w-28ch { width: 28ch }
