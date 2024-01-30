@@ -54,7 +54,8 @@ const en = {
   publicRoom: {
     waitForYourTurn: 'Wait for your turn',
     inviteSomeoneElse: 'Invite someone else',
-    copyInvitationLink: 'Copy invation link'
+    copyInvitationLink: 'Copy invation link',
+    beTheFirstOne: 'Start a new story'
   },
   footer: {
     changeLang: 'Change language:',

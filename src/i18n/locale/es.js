@@ -53,8 +53,9 @@ const es = {
   },
   publicRoom: {
     waitForYourTurn: 'Espera tu turno',
-    inviteSomeoneElse: 'Invite a alguien más',
-    copyInvitationLink: 'Copiar enlace de invitación'
+    inviteSomeoneElse: 'Invita a alguien más',
+    copyInvitationLink: 'Copiar enlace de invitación',
+    beTheFirstOne: 'Inicia una nueva historia'
   },
   footer: {
     changeLang: 'Cambiar idioma:',

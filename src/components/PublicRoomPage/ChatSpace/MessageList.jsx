@@ -8,7 +8,7 @@ export default function MessageList() {
 
   return (
     <div class="[ flex-column ] [ gap-xs flex-grow-2 ]">
-      <For each={publicRoom.messages} fallback={<p>Write the first message</p>}>
+      <For each={publicRoom.messages} fallback={<p>{t('publicRoom.beTheFirstOne')}</p>}>
         {(message, index) => (
           <MessageBox index={index()} userId={message.userId} message={message.message} />
         )}
