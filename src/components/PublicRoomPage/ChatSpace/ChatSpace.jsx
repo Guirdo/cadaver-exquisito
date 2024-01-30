@@ -12,7 +12,7 @@ export default function ChatSpace() {
   const [userFound, setUserFound] = createSignal(false)
 
   createEffect(() => {
-    if(publicRoom.players.findIndex(p => p.id === user.id) !== -1) {
+    if(publicRoom.players?.findIndex(p => p.id === user.id) !== -1) {
       setUserFound(true)
     }
   })
@@ -29,10 +29,10 @@ export default function ChatSpace() {
     <>
       <MessageList />
       <Switch>
-        <Match when={userFound() >= 0 || ready()}>
+        <Match when={userFound() || ready()}>
           <ChatInput />
         </Match>
-        <Match when={userFound() === -1 && !ready()}>
+        <Match when={!userFound() && !ready()}>
           <p>{t('waitingRoom.readyToStart')}</p>
           <form
             class="[ flex-column ] [ gap-sm ]"
