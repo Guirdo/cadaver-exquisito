@@ -119,3 +119,29 @@ export async function findPublicRoom() {
     ? data[0].id
     : createPublicRoom()
 }
+
+export async function getRandomPublicRoom(){
+  try{
+    const { data } = await supabase
+      .from('random_'+public_rooms_table)
+      .select('id')
+      .limit(1)
+      .single()
+
+    return data.id
+  }catch(error) {
+    console.error(error)
+  }
+}
+
+export async function getMostRecentPublicRooms() {
+  try{
+    const { data } = await supabase
+      .from('most_recent_'+public_rooms_table)
+      .select('*')
+
+      return data
+  }catch(error) {
+    console.error(error)
+  }
+}
