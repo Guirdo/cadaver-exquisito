@@ -2,7 +2,7 @@ import { publicRoom } from "../../../stores/public_room"
 import { ChatInput } from "./ChatInput"
 import MessageList from "./MessageList"
 import { Match, Switch, createEffect } from "solid-js"
-import { user } from "../../../stores/user"
+import { setUser, user } from "../../../stores/user"
 import { createSignal } from "solid-js"
 import isNicknameValid from "../../../helpers/isNicknameValid"
 import { t } from '../../../i18n'
