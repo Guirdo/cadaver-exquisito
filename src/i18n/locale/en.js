@@ -46,9 +46,15 @@ const en = {
   },
   homePage: {
     createRoom: 'Create room',
+    joinPublicRoom: 'Join public room',
     about: 'About',
     description1: '💀Cadáver Exquisito🍷is a wordplay, created by surrealist artist in the 20th century, where your friends and you write a poem or story together, but you just could see what the previous person wrote.',
     description2: 'At the end of the game, you will see the result of the collective consciousness of your group.'
+  },
+  publicRoom: {
+    waitForYourTurn: 'Wait for your turn',
+    inviteSomeoneElse: 'Invite someone else',
+    copyInvitationLink: 'Copy invation link'
   },
   footer: {
     changeLang: 'Change language:',
