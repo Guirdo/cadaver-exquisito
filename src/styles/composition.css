@@ -11,3 +11,13 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.content {
+  display:grid;
+  grid-template-columns: 1fr minmax(min(48ch, 100%),60ch) 1fr;
+}
+
+.grid-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(24ch,100%),1fr));
+}

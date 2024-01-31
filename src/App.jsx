@@ -23,8 +23,10 @@ export default function App(props) {
       <header>
         <Navbar />
       </header>
-      <main class={`[ flex-column ] [ align-items-center flex-grow-2 ${settings.theme} ]`}>
+      <main class={`[ content ] [ flex-grow ${settings.theme} ]`}>
+        <div class="grid-column-2">
         {props.children}
+        </div>
       </main>
       <Show when={room.status !== 1}>
         <Footer />
