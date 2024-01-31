@@ -22,8 +22,10 @@ export default function Footer() {
       <ImportantLinks />
 
       <p>
-        {t('footer.madeBy')} <a href="https://guirdo.xyz" target="_blank">Guirdo</a>
+        {t('footer.madeBy')} <a href="https://dev.guirdo.xyz" target="_blank">Guirdo</a>
       </p>
+
+      <small class="text-align-center">{t('footer.disclaimer')}</small>
     </footer>
   )
 }
