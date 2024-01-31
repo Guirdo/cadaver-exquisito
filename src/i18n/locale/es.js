@@ -65,7 +65,7 @@ const es = {
     spanish: 'Español',
     english: 'Inglés',
     madeBy: 'Hecho con ❤️ por',
-    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generador por los usuarios (mensajes, apodos)'
+    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generado por los usuarios (mensajes, apodos)'
   },
   settings: {
     title: 'Configuración',
