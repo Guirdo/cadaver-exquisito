@@ -25,16 +25,17 @@
   --info-color: #468080;
   --danger-color: #EE2E31;
   --dark-color: #07090F;
+  --white-color: white;
 }
 
 :root.light{
-  --theme-bg: white;
+  --theme-bg: var(--white-color);
   --theme-color: var(--dark-color);
 }
 
 :root.dark {
   --theme-bg: var(--dark-color);
-  --theme-color: white;
+  --theme-color: var(--white-color);
 }
 
 :root.dark .no-theme-color {
