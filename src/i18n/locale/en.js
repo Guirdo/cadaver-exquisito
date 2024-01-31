@@ -64,7 +64,8 @@ const en = {
     changeLang: 'Change language:',
     spanish: 'Spanish',
     english: 'English',
-    madeBy: 'Made with ❤️ by' 
+    madeBy: 'Made with ❤️ by',
+    disclaimer: 'The developer of this site is not responsible for any user generated content (messages, nicknames)'
   },
   settings: {
     title: 'Settings',

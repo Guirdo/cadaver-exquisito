@@ -1,9 +1,9 @@
 const es = {
-  common:{
+  common: {
     loading: 'Cargando...',
     enterNickname: 'Ingresa tu apodo'
   },
-  waitingRoom:{
+  waitingRoom: {
     waitingForEveryoneElse: 'Esperando a los demás a unirse...',
     players: 'Jugadores:',
     rounds: 'Rondas:',
@@ -29,7 +29,7 @@ const es = {
     saveAsImage: 'Guardar como imagen',
     share: 'Compartir'
   },
-  error:{
+  error: {
     copyFails: 'Perdón, no funciona en tu navegador',
     emptyNickname: 'No ingresaste un apodo para jugar',
     alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
@@ -57,14 +57,15 @@ const es = {
     copyInvitationLink: 'Copiar enlace de invitación',
     beTheFirstOne: 'Inicia una nueva historia',
     seeWhatOthersWrote: 'Ve lo que otros han escrito',
-    randomCadaver: 'Cadaver aleatorio',
+    randomCadaver: 'Cadáver aleatorio',
     threeMostRecent: 'Los tres más recientes'
   },
   footer: {
     changeLang: 'Cambiar idioma:',
     spanish: 'Español',
     english: 'Inglés',
-    madeBy: 'Hecho con ❤️ por' 
+    madeBy: 'Hecho con ❤️ por',
+    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generador por los usuarios (mensajes, apodos)'
   },
   settings: {
     title: 'Configuración',
