@@ -10,7 +10,7 @@ export default function PublicRoomPage() {
   fetchPublicRoom(params.id)
 
   return (
-    <div class="[ flex-column ] [ gap-xs flex-grow ]">
+    <div class="[ flex-column ] [ gap-xs flex-grow p-sm ]">
       <Switch>
         <Match when={!publicRoom.finished}>
           <ChatSpace />

@@ -65,7 +65,7 @@ export default function JoinRoom() {
         </button>
 
         <button
-          class="button fs-sm"
+          class="button fs-xs fw-normal"
           data-type="info"
           type="submit"
           value="createRoom"

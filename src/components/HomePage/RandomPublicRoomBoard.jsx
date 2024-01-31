@@ -16,10 +16,10 @@ export default function RandomPublicRoomBoard() {
   return (
     <div class="flex-column">
       <h2>{t('publicRoom.seeWhatOthersWrote')}</h2>
-      <A class="p-block-s-xs" href={`/p/${randomCadaver()}`}>
-      {t('publicRoom.randomCadaver')}
+      <A class="p-block-s-xs fw-bold" href={`/p/${randomCadaver()}`}>
+        {t('publicRoom.randomCadaver')}
       </A>
-      <h3 class="p-block-s-sm">{t('publicRoom.threeMostRecent')}</h3>
+      <h3 class="p-block-s-sm ">{t('publicRoom.threeMostRecent')}</h3>
       <ul>
         <For each={mostRecentPublicRooms()} fallback={<li>{t('common.loading')}</li>}>
           {(item) => (
