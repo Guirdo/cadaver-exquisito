@@ -2,7 +2,7 @@ import { useNavigate } from "@solidjs/router"
 import { createRoom } from "../../stores/room"
 import { findPublicRoom } from "../../stores/public_room"
 import { t } from '../../i18n'
-import { user } from "../../stores/user"
+import { user,setUser } from "../../stores/user"
 import isNicknameValid from "../../helpers/isNicknameValid"
 
 export default function JoinRoom() {
