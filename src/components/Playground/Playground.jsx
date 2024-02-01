@@ -34,7 +34,7 @@ export default function Playground() {
   fetchRoom(params.id)
 
   return (
-    <div class="[ playground ] [ flex-column ] [ flex-grow gap-lg p-sm align-items-center ]">
+    <div class="[ playground ] [ flex-column ] [ flex-grow w-100 gap-lg p-sm align-items-center ]">
       <StatusSwitcher />
     </div>
   )
