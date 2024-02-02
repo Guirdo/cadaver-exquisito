@@ -2,7 +2,7 @@ import { createStore, unwrap } from 'solid-js/store'
 import { supabase } from '../supabase'
 
 const PUBLIC_ROOMS_TABLE = import.meta.env.VITE_PUBLIC_ROOMS_TABLE
-const PUBLIC_ROOMS_MESSAGE_LIMIT = 12
+const PUBLIC_ROOMS_MESSAGE_LIMIT = 10
 const PUBLIC_ROOMS_EXPIRATION_INVERTAL = 1
 
 const initialState = {
@@ -87,11 +87,11 @@ export async function sendMessage(id, message, nickname) {
   try {
     let players = unwrap(publicRoom.players).map(e => ({ id: e.id, nickname: e.nickname }))
     let messages = unwrap(publicRoom.messages).map(e => e)
-    const finished = messages.length === PUBLIC_ROOMS_MESSAGE_LIMIT
     
     messages.push({ userId: id, message })
     nickname && players.push({ id, nickname })
-
+    
+    const finished = messages.length >= PUBLIC_ROOMS_MESSAGE_LIMIT
     if (finished) {
       players = players.map(p => p.nickname)
       messages = messages.map(p => p.message)
