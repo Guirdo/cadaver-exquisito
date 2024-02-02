@@ -16,10 +16,6 @@ export default function PublicResult(){
   const params = useParams()
   const [room] = createResource(params.id, fetchPublicResult)
 
-  if(room.state === 'ready') {
-    console.log(room())
-  }
-
   const handleSave = () => {
     const preview = document.getElementById('preview')
     preview.style.display = 'block'
