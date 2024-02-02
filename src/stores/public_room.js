@@ -3,7 +3,6 @@ import { supabase } from '../supabase'
 
 const PUBLIC_ROOMS_TABLE = import.meta.env.VITE_PUBLIC_ROOMS_TABLE
 const PUBLIC_ROOMS_MESSAGE_LIMIT = 10
-const PUBLIC_ROOMS_EXPIRATION_INVERTAL = 1
 
 const initialState = {
   id: '',
@@ -18,13 +17,9 @@ export const [publicRoom, setPublicRoom] = createStore(initialState)
 
 async function createPublicRoom() {
   try {
-    const currentdDate = new Date()
-    const expiratesAt = new Date(currentdDate.setDate(currentdDate.getDate() + PUBLIC_ROOMS_EXPIRATION_INVERTAL))
-
     const { data, error } = await supabase
       .from(PUBLIC_ROOMS_TABLE)
       .insert({
-        expirates_at: expiratesAt,
         players: [],
         messages: []
       })
