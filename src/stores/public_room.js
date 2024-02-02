@@ -28,11 +28,12 @@ async function createPublicRoom() {
         players: [],
         messages: []
       })
-      .select()
+      .select('id')
+      .single()
 
     if (error) throw new Error(error.message)
 
-    return data[0].id
+    return data.id
   } catch (error) {
     console.error(error)
   }
@@ -42,15 +43,16 @@ export async function fetchPublicRoom(id) {
   try {
     const { data, error } = await supabase
       .from(PUBLIC_ROOMS_TABLE)
-      .select('id, finished, players, messages,expirates_at')
+      .select('id, finished, players, messages')
       .eq('id', id)
+      .single()
 
     if (error) throw new Error(error.message)
 
-    let { messages } = data[0]
+    let { messages } = data
     messages = messages ?? []
 
-    setPublicRoom({ ...data[0], messages })
+    setPublicRoom({ ...data, messages })
     !publicRoom.finished && subscribeToPublicRoomChanges()
   } catch (error) {
     console.log(error)
@@ -115,9 +117,11 @@ export async function findPublicRoom() {
     .from(PUBLIC_ROOMS_TABLE)
     .select('id')
     .eq('finished', false)
+    .limit(1)
+    .maybeSingle()
 
-  return data.length !== 0
-    ? data[0].id
+  return data
+    ? data.id
     : createPublicRoom()
 }
 
