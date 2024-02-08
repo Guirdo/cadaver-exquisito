@@ -1,7 +1,6 @@
 import { Show, createEffect, onMount } from "solid-js";
 import { error } from "./stores/error";
 import { lazy } from "solid-js";
-import { room } from "./stores/room";
 import { ui } from "./stores/ui";
 import { settings } from "./stores/settings";
 import Navbar from "./components/Navbar";
@@ -25,12 +24,10 @@ export default function App(props) {
       </header>
       <main class={`[ content ] [ flex-grow ${settings.theme} ]`}>
         <div class="grid-column-2">
-        {props.children}
+          {props.children}
         </div>
       </main>
-      <Show when={room.status !== 1}>
-        <Footer />
-      </Show>
+      <Footer />
       <Show when={error.isDisplayed}>
         <ErrorModal />
       </Show>

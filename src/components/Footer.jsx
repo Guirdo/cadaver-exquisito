@@ -18,12 +18,14 @@ function ImportantLinks() {
 
 export default function Footer() {
   return (
-    <footer class="[ flex-row ] [ flex-wrap fs-xs gap-xs w-100 justify-content-evenly p-xs ]">
-      <ImportantLinks />
+    <footer class="[ flex-column ] [ fs-xs gap-xs w-100 p-xs ]">
+      <div class="[ flex-row ] [ flex-wrap justify-content-evenly gap-xs ]">
+        <ImportantLinks />
 
-      <p>
-        {t('footer.madeBy')} <a href="https://dev.guirdo.xyz" target="_blank">Guirdo</a>
-      </p>
+        <p>
+          {t('footer.madeBy')} <a href="https://dev.guirdo.xyz" target="_blank">Guirdo</a>
+        </p>
+      </div>
 
       <small class="text-align-center">{t('footer.disclaimer')}</small>
     </footer>
