@@ -31,6 +31,13 @@ export default function RandomPublicRoomBoard() {
           )}
         </For>
       </ul>
+
+      <A
+        class="p-block-s-xs fw-bold"
+        href="/archive"
+      >
+        {t('publicRoom.seeArchive')}
+      </A>
     </div >
   )
 }
