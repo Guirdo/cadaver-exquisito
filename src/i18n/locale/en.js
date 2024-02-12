@@ -58,7 +58,12 @@ const en = {
     beTheFirstOne: 'Start a new story',
     seeWhatOthersWrote: "See what other have written",
     randomCadaver: 'Random Cadaver',
-    threeMostRecent: 'The three most recent'
+    threeMostRecent: 'The three most recent',
+    seeArchive: 'Ver archivo',
+    archive: 'Archive',
+    pagination: 'Page {{ currentPage }} of {{ count }}',
+    prev: 'Previous',
+    next: 'Next'
   },
   footer: {
     changeLang: 'Change language:',

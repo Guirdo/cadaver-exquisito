@@ -58,7 +58,12 @@ const es = {
     beTheFirstOne: 'Inicia una nueva historia',
     seeWhatOthersWrote: 'Ve lo que otros han escrito',
     randomCadaver: 'Cadáver aleatorio',
-    threeMostRecent: 'Los tres más recientes'
+    threeMostRecent: 'Los tres más recientes',
+    seeArchive: 'Ver archivo',
+    archive: 'Archivo',
+    pagination: 'Página {{ currentPage }} de {{ count }}',
+    prev: 'Previo',
+    next: 'Siguiente'
   },
   footer: {
     changeLang: 'Cambiar idioma:',
