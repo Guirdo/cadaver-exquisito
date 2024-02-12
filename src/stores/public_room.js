@@ -1,5 +1,6 @@
 import { createStore, unwrap } from 'solid-js/store'
 import { supabase } from '../supabase'
+import getFromAndTo from '../utils/getFromAndTo'
 
 const PUBLIC_ROOMS_TABLE = import.meta.env.VITE_PUBLIC_ROOMS_TABLE
 const PUBLIC_ROOMS_MESSAGE_LIMIT = 10
@@ -84,10 +85,10 @@ export async function sendMessage(id, message, nickname) {
   try {
     let players = unwrap(publicRoom.players).map(e => ({ id: e.id, nickname: e.nickname }))
     let messages = unwrap(publicRoom.messages).map(e => e)
-    
+
     messages.push({ userId: id, message })
     nickname && players.push({ id, nickname })
-    
+
     const finished = messages.length >= PUBLIC_ROOMS_MESSAGE_LIMIT
     if (finished) {
       players = players.map(p => p.nickname)
@@ -120,28 +121,55 @@ export async function findPublicRoom() {
     : createPublicRoom()
 }
 
-export async function getRandomPublicRoom(){
-  try{
+export async function getRandomPublicRoom() {
+  try {
     const { data } = await supabase
-      .from('random_'+PUBLIC_ROOMS_TABLE)
+      .from('random_' + PUBLIC_ROOMS_TABLE)
       .select('id')
       .limit(1)
       .single()
 
     return data.id
-  }catch(error) {
+  } catch (error) {
     console.error(error)
   }
 }
 
 export async function getMostRecentPublicRooms() {
-  try{
+  try {
     const { data } = await supabase
-      .from('most_recent_'+PUBLIC_ROOMS_TABLE)
+      .from('most_recent_' + PUBLIC_ROOMS_TABLE)
       .select('*')
 
-      return data
-  }catch(error) {
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function getArchive(currentPage) {
+  try {
+    let { from, to } = getFromAndTo(currentPage)
+
+    const { data } = await supabase
+      .from('archived_' + PUBLIC_ROOMS_TABLE)
+      .select('*')
+      .range(from, to)
+
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function getArchiveCount() {
+  try {
+    const { count } = await supabase
+      .from('archived_' + PUBLIC_ROOMS_TABLE)
+      .select('*', { count: 'exact', head: true })
+
+    return count
+  } catch (error) {
     console.error(error)
   }
 }
