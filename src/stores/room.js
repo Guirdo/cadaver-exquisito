@@ -44,12 +44,13 @@ export async function fetchRoom(id) {
     messages = messages ?? []
 
     setRoom({ ...data[0], messages })
+    room.status !== 2 && subscribeToRoomChanges()
   } catch (error) {
     console.log(error)
   }
 }
 
-export async function subscribeToRoomChanges() {
+async function subscribeToRoomChanges() {
   await supabase
     .channel('roomChanges')
     .on(

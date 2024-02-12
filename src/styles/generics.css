@@ -80,3 +80,7 @@ select {
 textarea {
   resize: none;
 }
+
+a {
+  color: var(--accent-color)
+}

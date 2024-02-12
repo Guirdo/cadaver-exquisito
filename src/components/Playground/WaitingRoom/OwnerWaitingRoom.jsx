@@ -1,13 +1,11 @@
-import { useI18n } from "@solid-primitives/i18n"
 import { room, setRoom, startGame, updateRoom } from "../../../stores/room"
 import InvitationLink from "./InvitationLink"
 import PlayersList from "./PlayersList"
 import { setErrorMessage } from "../../../stores/error"
 import { For } from "solid-js"
+import { t } from '../../../i18n'
 
 function RoomSettings() {
-  const [t] = useI18n()
-
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -77,7 +75,6 @@ function RoomSettings() {
 }
 
 export default function OwnerWaitingRoom() {
-  const [t] = useI18n()
   return (
     <>
       <p>{t('waitingRoom.waitingForEveryoneElse')}</p>

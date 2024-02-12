@@ -1,5 +1,5 @@
-import { setErrorMessage } from "../../../stores/error";
 import { createSignal } from "solid-js";
+import { setErrorMessage } from "../../../stores/error";
 import { t } from '../../../i18n'
 
 export default function InvitationLink() {
@@ -20,7 +20,8 @@ export default function InvitationLink() {
   }
   return (
     <div class="flex-column gap-xs">
-      <p class="text-align-center">{t('waitingRoom.inviteFriends')}</p>
+      <p class="text-align-center">{t('publicRoom.waitForYourTurn')}</p>
+      <p class="text-align-center">{t('publicRoom.inviteSomeoneElse')}</p>
 
       <div class="flex-column">
 

@@ -1,10 +1,8 @@
-import { useI18n } from "@solid-primitives/i18n";
 import { room } from "../../../stores/room";
 import { user } from "../../../stores/user";
+import { t } from '../../../i18n'
 
 export default function PlayersList() {
-  const [ t ] = useI18n()
-
   return (
     <div class="[ flex-row ] [ gap-sm ]">
         <For each={room.players}>

@@ -3,11 +3,9 @@ import { clearRoom, finishGame, room } from "../../../stores/room";
 import ChatInput from "./ChatInput";
 import MessageList from "./MessageList";
 import { user } from "../../../stores/user";
-import { useI18n } from "@solid-primitives/i18n";
+import { t } from '../../../i18n'
 
 export default function ChatRoom() {
-  const [t] = useI18n()
-
   if (!room.players.find(p => p.id === user.id)) {
     clearRoom()
     return <p>{t('error.gameInProgress')}</p>

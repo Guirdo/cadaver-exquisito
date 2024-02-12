@@ -6,7 +6,7 @@ export default function Preview(props) {
   return (
     <div
       id="preview"
-      class="[ flex-column ] [ bg-white align-items-center ]"
+      class="[ flex-column ] [ bg-theme align-items-center ]"
       style={{ width: '30rem', display: 'none' }}
     >
       <div className="[ flex-row ] [ w-100 justify-content-center align-items-center p-xxs gap-xxs bg-primary ]">

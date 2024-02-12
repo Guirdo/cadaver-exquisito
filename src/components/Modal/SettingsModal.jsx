@@ -1,14 +1,11 @@
 import Modal from "./Modal";
-import { useI18n } from '@solid-primitives/i18n';
 import { setSettings, settings } from "../../stores/settings";
 import { setUI } from "../../stores/ui";
+import { t } from '../../i18n'
 
 function ChangeLangMenu() {
-  const [t, { locale }] = useI18n()
-
   const handleChange = (e) => {
     const lang = e.target.value
-    locale(lang)
     setSettings('lang', lang)
     document.documentElement.setAttribute("lang", lang);
   }
@@ -35,8 +32,6 @@ function ChangeLangMenu() {
 }
 
 export default function SettingsModal() {
-  const [t] = useI18n()
-
   return (
     <Modal>
       <h3 class="m-b-xs">{t('settings.title')}</h3>

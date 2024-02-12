@@ -1,9 +1,9 @@
 const es = {
-  common:{
+  common: {
     loading: 'Cargando...',
     enterNickname: 'Ingresa tu apodo'
   },
-  waitingRoom:{
+  waitingRoom: {
     waitingForEveryoneElse: 'Esperando a los demás a unirse...',
     players: 'Jugadores:',
     rounds: 'Rondas:',
@@ -29,7 +29,7 @@ const es = {
     saveAsImage: 'Guardar como imagen',
     share: 'Compartir'
   },
-  error:{
+  error: {
     copyFails: 'Perdón, no funciona en tu navegador',
     emptyNickname: 'No ingresaste un apodo para jugar',
     alphanumNickname: 'Tu apodo solo debe tener caracteres alfanuméricos',
@@ -45,16 +45,32 @@ const es = {
     donate: 'Invítame un café ☕',
   },
   homePage: {
-    createRoom: 'Crear sala',
+    createRoom: 'Crea sala privada',
+    joinPublicRoom: 'Unete a sala pública',
     about: 'Acerca de',
     description1: '💀Cadáver Exquisito🍷es un juego de palabras, creado por artistas surrealistas del siglo XX, donde tus amigos y tú escriben juntos un poema o historia, pero solo podrás ver lo que la persona anterior escribió.',
-    description2: 'Lo que verán al final de la partida será fruto del consciente colectivo de su grupo.'
+    description2: 'Lo que verán al final de la partida será fruto del consciente colectivo de su grupo.',
+  },
+  publicRoom: {
+    waitForYourTurn: 'Espera tu turno',
+    inviteSomeoneElse: 'Invita a alguien más',
+    copyInvitationLink: 'Copiar enlace de invitación',
+    beTheFirstOne: 'Inicia una nueva historia',
+    seeWhatOthersWrote: 'Ve lo que otros han escrito',
+    randomCadaver: 'Cadáver aleatorio',
+    threeMostRecent: 'Los tres más recientes',
+    seeArchive: 'Ver archivo',
+    archive: 'Archivo',
+    pagination: 'Página {{ currentPage }} de {{ count }}',
+    prev: 'Previo',
+    next: 'Siguiente'
   },
   footer: {
     changeLang: 'Cambiar idioma:',
     spanish: 'Español',
     english: 'Inglés',
-    madeBy: 'Hecho con ❤️ por' 
+    madeBy: 'Hecho con ❤️ por',
+    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generado por los usuarios (mensajes, apodos)'
   },
   settings: {
     title: 'Configuración',
