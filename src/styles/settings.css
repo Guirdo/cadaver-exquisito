@@ -26,16 +26,19 @@
   --danger-color: #EE2E31;
   --dark-color: #07090F;
   --white-color: white;
+  --accent-color: #2ec4b6;
 }
 
 :root.light{
   --theme-bg: var(--white-color);
   --theme-color: var(--dark-color);
+  --accent-color:#4E598C;
 }
 
 :root.dark {
   --theme-bg: var(--dark-color);
   --theme-color: var(--white-color);
+  --accent-color: #2ec4b6;
 }
 
 :root.dark .no-theme-color {
