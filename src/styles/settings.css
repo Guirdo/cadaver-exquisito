@@ -1,9 +1,9 @@
 :root {
-  --scale:1.15;
+  --scale:1.1;
 
   --font: 'Aleo';
 
-  --fs-md: clamp(1rem,1rem + 0.5vi, 1.4rem);
+  --fs-md: clamp(1rem,1rem + 0.4vi, 1.4rem);
   --fs-sm: calc(var(--fs-md) / var(--scale));
   --fs-xs: calc(var(--fs-sm) / var(--scale));
   --fs-lg: calc(var(--fs-md) * var(--scale));
@@ -25,16 +25,20 @@
   --info-color: #468080;
   --danger-color: #EE2E31;
   --dark-color: #07090F;
+  --white-color: white;
+  --accent-color: #2ec4b6;
 }
 
 :root.light{
-  --theme-bg: white;
+  --theme-bg: var(--white-color);
   --theme-color: var(--dark-color);
+  --accent-color:#4E598C;
 }
 
 :root.dark {
   --theme-bg: var(--dark-color);
-  --theme-color: white;
+  --theme-color: var(--white-color);
+  --accent-color: #2ec4b6;
 }
 
 :root.dark .no-theme-color {

@@ -49,6 +49,8 @@ npm install
 ```
 VITE_SUPABASE_URL=<supabase-url>
 VITE_SUPABASE_ANON_KEY=<supabse-anon-key>
+VITE_ROOMS_TABLE=<supabase-rooms-table>
+VITE_PUBLIC_ROOMS_TABLE=<supabase-public-rooms-table>
 ```
 
 4. Now you can run the app

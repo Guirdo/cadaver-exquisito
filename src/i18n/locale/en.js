@@ -45,16 +45,37 @@ const en = {
     donate: 'Buy me a coffee ☕',
   },
   homePage: {
-    createRoom: 'Create room',
+    createRoom: 'Create a private room',
+    joinPublicRoom: 'Join public room',
     about: 'About',
-    description1: '💀Cadáver Exquisito🍷is a wordplay, created by surrealist artist in the 20th century, where your friends and you write a poem or story together, but you just could see what the previous person wrote.',
-    description2: 'At the end of the game, you will see the result of the collective consciousness of your group.'
+    description1: '💀Cadáver Exquisito🍷is a wordplay, created by surrealist artists in the 20th century, where your friends and you write a poem or story together, but you just could see what the previous person wrote.',
+    description2: 'At the end of the game, you will see the result of the collective consciousness of your group.',
+  },
+  publicRoom: {
+    waitForYourTurn: 'Wait for your turn',
+    inviteSomeoneElse: 'Invite someone else',
+    copyInvitationLink: 'Copy invation link',
+    beTheFirstOne: 'Start a new story',
+    seeWhatOthersWrote: "See what other have written",
+    randomCadaver: 'Random Cadaver',
+    threeMostRecent: 'The three most recent',
+    seeArchive: 'Ver archivo',
+    archive: 'Archive',
+    pagination: 'Page {{ currentPage }} of {{ count }}',
+    prev: 'Previous',
+    next: 'Next'
+  },
+  credits: {
+    title: 'Credits',
+    soundEffects: 'Sound effects:',
   },
   footer: {
     changeLang: 'Change language:',
     spanish: 'Spanish',
     english: 'English',
-    madeBy: 'Made with ❤️ by' 
+    madeBy: 'Made with ❤️ by',
+    disclaimer: 'The developer of this site is not responsible for any user generated content (messages, nicknames)',
+    credits: 'Credits'
   },
   settings: {
     title: 'Settings',

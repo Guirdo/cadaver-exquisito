@@ -1,7 +1,6 @@
-import { useI18n } from "@solid-primitives/i18n"
+import { t } from '../../i18n'
 
 export default function PlayerList(props) {
-  const [t] = useI18n()
   return (
     <>
       <p class="fw-bold">{t('result.writtenBy')}</p>

@@ -1,6 +1,6 @@
 import DOMPurify from 'dompurify'
 import isEmpty from "validator/es/lib/isEmpty"
-import { setErrorMessage } from '../../../stores/error'
+import { setErrorMessage } from '../stores/error'
 
 const urlRegex = /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/g
 
@@ -10,6 +10,7 @@ function contains(text) {
 }
 
 export function isMessageValid(message) {
+  message = message.trim()
   if (isEmpty(message)) {
     setErrorMessage('invalidMessage')
     return false

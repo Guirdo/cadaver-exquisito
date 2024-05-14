@@ -1,19 +1,20 @@
-import { createSignal } from "solid-js";
-import { useParams } from "@solidjs/router";
-import { Show, createResource, lazy } from "solid-js";
+import { useParams } from "@solidjs/router"
+import download from "downloadjs"
+import { toPng } from "html-to-image"
+import { createResource, createSignal, lazy } from "solid-js"
+import { setErrorMessage } from "../../../stores/error"
+import { Show } from "solid-js"
+import { fetchPublicResult } from "./PublicResult.helper"
+import Preview from '../../Common/Preview'
 import { t } from '../../../i18n'
-import { fetchResult } from "./Result.helper";
-import { toPng } from "html-to-image";
-import download from "downloadjs";
-import Preview from "../../Common/Preview";
 
 const PlayerList = lazy(() => import('../../Common/PlayerList'))
 const MessageList = lazy(() => import('../../Common/MessageList'))
 
-export default function Result() {
+export default function PublicResult(){
   const [isWaiting, setIsWaiting] = createSignal(false)
   const params = useParams()
-  const [room] = createResource(params.id, fetchResult)
+  const [room] = createResource(params.id, fetchPublicResult)
 
   const handleSave = () => {
     const preview = document.getElementById('preview')

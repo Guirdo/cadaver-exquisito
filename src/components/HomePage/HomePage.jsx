@@ -1,61 +1,22 @@
-import { useNavigate } from "@solidjs/router"
-import { user, setUser } from "../../stores/user"
-import isNicknameValid from "../../helpers/isNicknameValid"
+import { setUser } from "../../stores/user"
 import { onMount } from "solid-js"
-import { useI18n } from "@solid-primitives/i18n"
-import { clearRoom, createRoom } from "../../stores/room"
+import { clearRoom } from "../../stores/room"
 import InfoSection from "./InfoSection"
+import JoinRoom from "./JoinRoom"
+import RandomPublicRoomBoard from "./RandomPublicRoomBoard"
 
 export default function HomePage() {
-  const navigate = useNavigate()
-  const [ t ] = useI18n()
-
-  onMount(() =>{
+  onMount(() => {
     setUser('isOwner', false)
     clearRoom()
   })
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-
-    if (isNicknameValid()) {
-      const roomId = await createRoom(user)
-      setUser('isOwner', true)
-      navigate(`/${roomId}`)
-    }
-  }
-
   return (
-    <div class="[ flex-column ] [ w-100 gap-lg p-md align-items-center ]">
-      <figure class="w-6rem">
-        <img src="/icons/skull.webp" />
-      </figure>
-
-      <form
-        class="[ flex-column ] [ gap-sm ]"
-        onSubmit={handleSubmit}
-      >
-        <label
-          class="fw-bold "
-          for="nickname"
-        >
-          {t('common.enterNickname')}
-        </label>
-        <input
-          id="nickname"
-          name="nickname"
-          value={user.nickname}
-          onInput={(e) => setUser('nickname', e.target.value)}
-        />
-
-        <button
-          class="button"
-          data-type="success"
-          type="submit"
-        >
-          {t('homePage.createRoom')}
-        </button>
-      </form>
+    <div id="home-page" class="[ flex-column ] [ w-100 gap-lg p-md align-items-center ]">
+      <div class="[ flex-row ] [ align-items-center gap-lg flex-wrap w-100 justify-content-evenly ]">
+        <JoinRoom />
+        <RandomPublicRoomBoard />
+      </div>
 
       <InfoSection />
     </div>

@@ -1,10 +1,8 @@
 import Modal from './Modal'
 import { clearError, error } from '../../stores/error'
-import { useI18n } from '@solid-primitives/i18n'
+import { t } from '../../i18n'
 
 export default function ErrorModal() {
-  const [t] = useI18n()
-
   return (
     <Modal>
       <h3 class="color-danger">Error</h3>

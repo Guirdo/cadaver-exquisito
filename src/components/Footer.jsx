@@ -1,32 +1,29 @@
-import { useI18n } from "@solid-primitives/i18n"
-
-function ImportantLinks() {
-  const [t] = useI18n()
-  return (
-    <ul class="[ flex-row ] [ m-0 list-style-none flex-wrap ]">
-      <li>
-        <a
-          class="color-inherit"
-          href="https://ko-fi.com/guirdo"
-          target="_blank"
-        >
-          {t('links.donate')}
-        </a>
-      </li>
-    </ul>
-  )
-}
+import { A } from '@solidjs/router'
+import { t } from '../i18n'
 
 export default function Footer() {
-  const [t] = useI18n()
-
   return (
-    <footer class="[ flex-row ] [ flex-wrap fs-xs gap-xs w-100 justify-content-evenly p-xs ]">
-      <ImportantLinks />
+    <footer class="[ flex-column ] [ fs-xs gap-xs w-100 p-xs ]">
+      <div class="[ flex-row ] [ flex-wrap justify-content-evenly gap-xs ]">
+      <a
+        class="color-inherit"
+        href="https://ko-fi.com/guirdo"
+        target="_blank"
+      >
+        {t('links.donate')}
+      </a>
+      <A
+        class='color-inherit'
+        href="/credits"
+      >
+        {t('footer.credits')}
+      </A>
 
-      <p>
-        {t('footer.madeBy')} <a href="https://guirdo.xyz" target="_blank">Guirdo</a>
-      </p>
+        <p>
+          {t('footer.madeBy')} <a href="https://dev.guirdo.xyz" target="_blank">Guirdo</a>
+        </p>
+      </div>
+      <small class="text-align-center">{t('footer.disclaimer')}</small>
     </footer>
   )
 }

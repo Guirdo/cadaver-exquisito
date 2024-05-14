@@ -1,17 +1,15 @@
 import { Show, createEffect, onMount } from "solid-js";
 import { error } from "./stores/error";
 import { lazy } from "solid-js";
-import { room } from "./stores/room";
 import { ui } from "./stores/ui";
 import { settings } from "./stores/settings";
-import Router from "./router";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const ErrorModal = lazy(() => import('./components/Modal/ErrorModal'))
 const SettingsModal = lazy(() => import('./components/Modal/SettingsModal'))
 
-export default function App() {
+export default function App(props) {
   onMount(() => {
     document.documentElement.setAttribute("lang", settings.lang)
     document.documentElement.className = settings.theme
@@ -24,12 +22,12 @@ export default function App() {
       <header>
         <Navbar />
       </header>
-      <main class={`[ flex-column ] [ align-items-center flex-grow-2 ${settings.theme} ]`}>
-        <Router />
+      <main class={`[ content ] [ flex-grow ${settings.theme} ]`}>
+        <div class="grid-column-2">
+          {props.children}
+        </div>
       </main>
-      <Show when={room.status !== 1}>
-        <Footer />
-      </Show>
+      <Footer />
       <Show when={error.isDisplayed}>
         <ErrorModal />
       </Show>
