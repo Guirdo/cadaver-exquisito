@@ -7,6 +7,7 @@ const HomePage = lazy(() => import('../components/HomePage'))
 const NotFoundPage = lazy(() => import('../components/NotFoundPage'))
 const PublicRoomPage = lazy(() => import('../components/PublicRoomPage'))
 const ArchivePage = lazy(() => import('../components/ArchivePage'))
+const CreditsPage = lazy(() => import('../components/CreditsPage'))
 
 const playgroundRouteFilter = {
   id: (id) => isUUID(id,4)
@@ -33,6 +34,11 @@ export default function AppRouter() {
         path="/archive"
         component={ArchivePage}
       />
+      <Route
+        path="/credits"
+        component={CreditsPage}
+      />
+      
       <Route
         path="*404"
         component={NotFoundPage}
