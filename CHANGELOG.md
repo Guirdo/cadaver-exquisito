@@ -1,5 +1,74 @@
 # Changelog
 
+<a name="2.0.0"></a>
+## 2.0.0 (2024-05-14)
+
+### Added
+
+- ✨ Add &#x27;joinPublicRoom&#x27; option [[0ab8bb3](https://github.com/Guirdo/cadaver-exquisito/commit/0ab8bb36316c9513323993dfcd05639393fc009b)]
+- ➕ Add crypto-randomuuid dependecy [[eb396f3](https://github.com/Guirdo/cadaver-exquisito/commit/eb396f332ff82269226ed37b270398bb34642d7e)]
+
+### Changed
+
+- ⬆️ Upgrade solidjs/router [[5d78d65](https://github.com/Guirdo/cadaver-exquisito/commit/5d78d659efecbfaddf60e4cb84c502786e36ba57)]
+- 💄 Add accent color for links [[42ebe73](https://github.com/Guirdo/cadaver-exquisito/commit/42ebe73198f0e72741f86ad0f4ef2e489a324afe)]
+- 💬 Update environtment variables example [[e0d118c](https://github.com/Guirdo/cadaver-exquisito/commit/e0d118c0a042eacca83521451ed6b84d5587a735)]
+- 🗃️ Get public room archive [[a6f370a](https://github.com/Guirdo/cadaver-exquisito/commit/a6f370a240b67d94a033ad5469b034ca7cd057d0)]
+- 🚸 Show footer always [[90f516a](https://github.com/Guirdo/cadaver-exquisito/commit/90f516a08e944cf2c0dbc959c15ae70a69da828f)]
+- ♻️ Get an object instead of an array when querying a single row [[1077801](https://github.com/Guirdo/cadaver-exquisito/commit/1077801c9a9f5dfbaa212b69083fbf420cc0fe39)]
+- 💄 Update playground style to fit the whole space [[db707ef](https://github.com/Guirdo/cadaver-exquisito/commit/db707ef408be3d232a8e40df5aa46e911a58ee21)]
+- 💬 Add footer disclaimer and fix broke personal link [[9c4e4bf](https://github.com/Guirdo/cadaver-exquisito/commit/9c4e4bf184ec41907898d16969dd3ce287b9fbd1)]
+- 💄 Fix some style issues in HomePage an PublicRoomPage [[5f1107a](https://github.com/Guirdo/cadaver-exquisito/commit/5f1107adb2e6623b19e612b61f1a0a773ff10cde)]
+- 💄 Add white-color in the color palette [[426e5d4](https://github.com/Guirdo/cadaver-exquisito/commit/426e5d4ac07a85b7af0294e9b6db37fa6eb1f23e)]
+- 💄 Add new composition and utilities styles [[e3365db](https://github.com/Guirdo/cadaver-exquisito/commit/e3365db7dc8acdd098c8c7d43f98e860fb9f0bbe)]
+- 🚚 Move sanitizeText into helpers folder [[856b005](https://github.com/Guirdo/cadaver-exquisito/commit/856b0050aab624c44d5403db26e4ef6f72f64514)]
+- 💄 Add style utilities for padding [[6841e07](https://github.com/Guirdo/cadaver-exquisito/commit/6841e075918e3827d576db0edca5bc8d1680798c)]
+- 💄 Reduce general font size a little bit [[7246d0e](https://github.com/Guirdo/cadaver-exquisito/commit/7246d0e2c43d3237ddc24c4c1578033a026c8ca9)]
+- 💄 Add bg-theme in Preview component [[63af6f7](https://github.com/Guirdo/cadaver-exquisito/commit/63af6f75b0ba0192a960e9e729b719700c9ee452)]
+- 🚚 Move three common components from Result [[0a70233](https://github.com/Guirdo/cadaver-exquisito/commit/0a70233bae2c25923fdc7b15cd690304ab5e6257)]
+- 🗃️ Add public_room store [[4ad626a](https://github.com/Guirdo/cadaver-exquisito/commit/4ad626afaf92c39a1540fb464e47368a1f287179)]
+- 👽 Update t references [[80320b0](https://github.com/Guirdo/cadaver-exquisito/commit/80320b0eb8a739771318eb85b2ac36a12f83dc80)]
+- 👽 Update code due to solid-router API changes [[c41c0bd](https://github.com/Guirdo/cadaver-exquisito/commit/c41c0bdc41ec12acc02ef77f2799b5fa5a855069)]
+- 👽 Add resolveTemplate to the translator [[24c26e8](https://github.com/Guirdo/cadaver-exquisito/commit/24c26e8594b3ddee2aa83e82ad6a22daed898e53)]
+- 👽 Update code due to API changes in solidjs i18n [[0ab9f07](https://github.com/Guirdo/cadaver-exquisito/commit/0ab9f075206626f1dfbbbb7e5174dc5fce6c5509)]
+- ⬆️ Upgrade fundamental dependencies [[9875e68](https://github.com/Guirdo/cadaver-exquisito/commit/9875e68bd3dd02c4945da43181001b1ff37351a8)]
+
+### Fixed
+
+- 🐛 Fix wrong condicional checking of room messages limit [[964f544](https://github.com/Guirdo/cadaver-exquisito/commit/964f54431515df3c3c7f6cc042531095e807d99e)]
+- ✏️ Fix typo in diclaimer translation [[a6010f9](https://github.com/Guirdo/cadaver-exquisito/commit/a6010f9515acac1c33ab9522e5a040e1f383981a)]
+
+### Miscellaneous
+
+-  Merge pull request [#4](https://github.com/Guirdo/cadaver-exquisito/issues/4) from Guirdo/public-room [[f9f0bf8](https://github.com/Guirdo/cadaver-exquisito/commit/f9f0bf8cab6e908c9c1aedc2b652e97da324ae82)]
+- 🧩 Add CreditsPage component [[b791ff3](https://github.com/Guirdo/cadaver-exquisito/commit/b791ff3de4f30deea2151fe1d3f4fffcea3d9c80)]
+- 🌐 Add credits translation [[d287b20](https://github.com/Guirdo/cadaver-exquisito/commit/d287b2060c9d3415e6f4c4b06b880913c1cd2980)]
+- 🧩 Add ArchivePage component [[dffc33d](https://github.com/Guirdo/cadaver-exquisito/commit/dffc33d8a02bcf71f6b620f701883ac2d71c8654)]
+- 🌐 Add archive translations [[a57f82a](https://github.com/Guirdo/cadaver-exquisito/commit/a57f82a3c4c9dcf8d13ff54c9425fa5c13478754)]
+- 👔 Add getFromAndTo utility [[2c7ac7f](https://github.com/Guirdo/cadaver-exquisito/commit/2c7ac7f81ba4cb1a904e8adc7180e358b6bfc66f)]
+- 👔 Remove expirates_at column [[33c1ea4](https://github.com/Guirdo/cadaver-exquisito/commit/33c1ea4dd5f37e24f6e22272f7327a2def1c496a)]
+- ⚰️ Remove dead console log [[97a10a7](https://github.com/Guirdo/cadaver-exquisito/commit/97a10a7a5b400c33e8b4c26672a79e326e55f4e6)]
+- 🩹 Fix missing reference to setUser [[4357477](https://github.com/Guirdo/cadaver-exquisito/commit/435747775fa626baa979fc94a2d89023e6aba6a1)]
+- 🌐 Add footer disclaimer [[eee0776](https://github.com/Guirdo/cadaver-exquisito/commit/eee0776503e7a0f506847186d57e8364fe5e3db1)]
+- 🌐 Fix some translations [[43b4a92](https://github.com/Guirdo/cadaver-exquisito/commit/43b4a92a38f52e02a8deadae948d01abf1e9366a)]
+- 🧩 Add SectionTemplate subcomponent in InfoSection [[33a5b46](https://github.com/Guirdo/cadaver-exquisito/commit/33a5b465af0bd2e208562e93739ded95275b079a)]
+- 👔 Increment textLength in cutOffText utility [[977b373](https://github.com/Guirdo/cadaver-exquisito/commit/977b37378ab348428612f7880006fd24a982f442)]
+- 👔 Update public rooms limits [[04543dc](https://github.com/Guirdo/cadaver-exquisito/commit/04543dcf8ea2155de23046afa462e33a220220f6)]
+- 🌐 Add translations in publicRoom and homePage [[56e583d](https://github.com/Guirdo/cadaver-exquisito/commit/56e583d08a30f5ae56552c31716936e44c929d9a)]
+- 🧩 Add RandomPublicRoomBoard component [[6d9552d](https://github.com/Guirdo/cadaver-exquisito/commit/6d9552d22ead13600a70318d9c5b69b5055364af)]
+- 🧩 Add JoinRoom component [[3732945](https://github.com/Guirdo/cadaver-exquisito/commit/3732945e23c6fb0f2a2069dd852f2f095ded163c)]
+- 👔 Fetch random public rooms [[d623ff3](https://github.com/Guirdo/cadaver-exquisito/commit/d623ff3712e0ff89454c3c06aaebc5f2033ae883)]
+- 👔 Add cutOffText utility [[05f0fdd](https://github.com/Guirdo/cadaver-exquisito/commit/05f0fdd056c33abb19002784ef43b3a2fe67f330)]
+- 🩹 Add missing setUser import [[7d755a1](https://github.com/Guirdo/cadaver-exquisito/commit/7d755a128345c4571a622f71c79156b5584e3fbd)]
+- 🩹 Fix logic bugs in ChatSpace [[d7534e9](https://github.com/Guirdo/cadaver-exquisito/commit/d7534e989e69da0101206fe49e2eaf355f4c0609)]
+- 🌐 Add new translation in publicRoom [[30e9cfe](https://github.com/Guirdo/cadaver-exquisito/commit/30e9cfec1cc58679a1e465f6545032bbabf7bba9)]
+- 🧩 Add PublicRoomPage [[f35e3e3](https://github.com/Guirdo/cadaver-exquisito/commit/f35e3e37fa22994243657fd1f384fff1fcb4d3e4)]
+- 🧩 Add components for PublicResult [[30eee3f](https://github.com/Guirdo/cadaver-exquisito/commit/30eee3f53a7d4e54d13ae9301ae05cb7a08ca23c)]
+- 🧩 Add components for ChatSpace [[0a36765](https://github.com/Guirdo/cadaver-exquisito/commit/0a36765b767136ac05e9fa602a4a79e557c1e060)]
+- 🌐 Add publicRoom translations [[e0a99bf](https://github.com/Guirdo/cadaver-exquisito/commit/e0a99bfe7aae961314d52b2630b1637245d32fac)]
+- 🩹 Move subscription inside fetchRoom method [[b91e2a3](https://github.com/Guirdo/cadaver-exquisito/commit/b91e2a34e51b4562d852abb7b2c386443f15a35a)]
+
+
 <a name="1.3.0"></a>
 ## 1.3.0 (2023-11-07)
 
