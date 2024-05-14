@@ -65,12 +65,17 @@ const en = {
     prev: 'Previous',
     next: 'Next'
   },
+  credits: {
+    title: 'Credits',
+    soundEffects: 'Sound effects:',
+  },
   footer: {
     changeLang: 'Change language:',
     spanish: 'Spanish',
     english: 'English',
     madeBy: 'Made with ❤️ by',
-    disclaimer: 'The developer of this site is not responsible for any user generated content (messages, nicknames)'
+    disclaimer: 'The developer of this site is not responsible for any user generated content (messages, nicknames)',
+    credits: 'Credits'
   },
   settings: {
     title: 'Settings',

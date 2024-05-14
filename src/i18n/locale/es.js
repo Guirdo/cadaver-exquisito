@@ -65,12 +65,17 @@ const es = {
     prev: 'Previo',
     next: 'Siguiente'
   },
+  credits: {
+    title: 'Créditos',
+    soundEffects: 'Efectos de sonido:',
+  },
   footer: {
     changeLang: 'Cambiar idioma:',
     spanish: 'Español',
     english: 'Inglés',
     madeBy: 'Hecho con ❤️ por',
-    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generado por los usuarios (mensajes, apodos)'
+    disclaimer: 'El desarrollador de la página no se hace responsable del contenido generado por los usuarios (mensajes, apodos)',
+    credits: 'Créditos',
   },
   settings: {
     title: 'Configuración',
