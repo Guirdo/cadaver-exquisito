@@ -31,7 +31,7 @@ export default function ArchivePage() {
                     </For>
                 </ul>
 
-                <div class="flex-row [ gap-xs align-items-center  ]">
+                <div class="archive-pagination [ gap-xs align-items-center  ]">
                     <button
                         class="button fw-normal fs-sm"
                         onClick={() => setCurrentPage(current => current > 0 && current - 1)}
