@@ -59,7 +59,7 @@ const en = {
     seeWhatOthersWrote: "See what other have written",
     randomCadaver: 'Random Cadaver',
     threeMostRecent: 'The three most recent',
-    seeArchive: 'Ver archivo',
+    viewArchive: 'View archive',
     archive: 'Archive',
     pagination: 'Page {{ currentPage }} of {{ count }}',
     prev: 'Previous',

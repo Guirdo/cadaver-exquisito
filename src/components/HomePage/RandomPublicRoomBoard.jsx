@@ -36,7 +36,7 @@ export default function RandomPublicRoomBoard() {
         class="p-block-s-xs fw-bold"
         href="/archive"
       >
-        {t('publicRoom.seeArchive')}
+        {t('publicRoom.viewArchive')}
       </A>
     </div >
   )
