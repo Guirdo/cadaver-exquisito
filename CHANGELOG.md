@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="2.0.1"></a>
+## 2.0.1 (2024-05-29)
+
+### Changed
+
+- 💄 Improve archive pagination styles [[f697864](https://github.com/Guirdo/cadaver-exquisito/commit/f697864c6cb832282d1175717924fc3b39b25630)]
+
+### Fixed
+
+- ✏️ Fix typos in viewArchive translation [[070a048](https://github.com/Guirdo/cadaver-exquisito/commit/070a048175925ab9bdfdb277bf79e4c2eb899ade)]
+
+
 <a name="2.0.0"></a>
 ## 2.0.0 (2024-05-14)
 
